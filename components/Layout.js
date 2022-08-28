@@ -7,9 +7,9 @@ import Container from './Container';
 const Layout = ({ children }) => {
   return (
     <>
+      <Navbar />
       <Container>
         <Head />
-        <Navbar />
         {children}
         <Footer />
       </Container>

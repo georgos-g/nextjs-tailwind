@@ -6,22 +6,28 @@ import Contact from './Contact';
 export default function Home() {
   return (
     <>
-      <div className=''></div>
-      <section id='home' className='bg-blue-400 h-screen'>
-        <h1 className=''>Home</h1>
-        <h2 className='text-center text-3xl font-bold'>
-          Sesame snaps tart lemon drops gummi bears donut brownie wafer cotton
-          candy jelly. Sweet roll sweet jujubes toffee tootsie roll ice cream
-          chocolate bar. Cupcake caramels fruitcake. Croissant sweet roll
-          marzipan toffee. Halvah candy brownie muffin bear claw croissant.
-          Marshmallow apple pie cupcake chocolate cake dessert cake. Lollipop
-          lollipop tootsie roll. Brownie gummi bears cheesecake marshmallow.
-          Donut sweet roll brownie pudding tiramisu croissant chocolate. Wafer
-          chocolate pastry jujubes gingerbread jujubes. Donut cookie danish
-          sweet croissant caramels gingerbread.
-        </h2>
+      {/* add a responsive fullscreen bg-img to section */}
+      <Head>
+        <title>Home</title>
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
+
+      <section id='home'>
+        <div className='relative  bg-gradient-to-tl from-gray-900 to-gray-600  w-full h-full -z-10'>
+          <img
+            src='img/hero_bg.jpg'
+            className='absolute object-cover h-full w-full mix-blend-overlay'
+          />
+          <div className='h-screen flex flex-col justify-center items-center'>
+            <h2 className='drop-shadow-lg shadow-slate-100 font-openSansLight text-center text-1xl tracking-[3px] text-gray-400'>
+              JUNIOR FRONTEND DEVELOPER | MEDIA DESIGNER
+              <h1 className='font-montserratBold  text-[3.5em] tracking-[9px] text-gray-100'>
+                GEORGOS GAKIS
+              </h1>
+            </h2>
+          </div>
+        </div>
       </section>
-      <Head />
       <About />
       <Services />
       <Contact />
