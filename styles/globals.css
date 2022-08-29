@@ -64,3 +64,17 @@
     /* Super Modern Browsers */
       url('../public/fonts/montserrat-v25-latin-900.woff') format('woff'); /* Modern Browsers */
 }
+
+@layer base {
+  a {
+    /* @apply text-blue-900; */
+
+    cursor: pointer;
+  }
+}
+
+@layer utilities {
+  .active {
+    color: white;
+  }
+}
