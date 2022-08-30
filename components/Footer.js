@@ -10,7 +10,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className='bg-gray-900 text-white text-center py-3'>
+    <footer className='bg-bg_top_bottom text-gray-300 font-montserratThin text-sm text-center py-3'>
       {/* create a div fixed to bottom of page */}
       <div className='flex justify-center'>
         <a
@@ -33,7 +33,7 @@ export default function Footer() {
         </a>
       </div>
       <p className='mt-3'>
-        &copy; {new Date().getFullYear()} Georgos Gakis. All rights reserved.
+        &copy; {new Date().getFullYear()} GEORGOS GAKIS | MADE BY MYSELF
       </p>
     </footer>
   );

@@ -14,13 +14,13 @@ const Links = [
   },
   {
     id: 2,
-    name: 'ABOUT',
-    url: 'about',
+    name: 'SERVICES',
+    url: 'services',
   },
   {
     id: 3,
-    name: 'SERVICES',
-    url: 'services',
+    name: 'ABOUT',
+    url: 'about',
   },
   {
     id: 4,
@@ -54,14 +54,14 @@ const Navbar = () => {
         // Navbar with fixed position and background color
         className={`${
           isScroll
-            ? 'bg-gray-800 text-gray-400 '
-            : 'bg-transparent text-gray-400'
-        } fixed top-0 left-0 right-0`}
+            ? 'bg-bg_top_bottom text-gray-300 '
+            : 'bg-transparent text-gray-600'
+        } fixed top-0 left-0 right-0 z-20`}
       >
-        <div className=' mx-auto px-2 sm:px-6 lg:px-8'>
-          <div className='relative flex items-center justify-between container h-16'>
+        <div className=' mx-auto px-2 sm:px-6 lg:px-8 '>
+          <div className='relative flex items-center justify-between h-16'>
+            {/* Mobile menu hamburger button */}
             <div className='absolute inset-y-0 right-0 flex items-center sm:hidden'>
-              {/* Mobile menu hamburger button*/}
               <button
                 onClick={toggle}
                 type='button'
@@ -77,11 +77,13 @@ const Navbar = () => {
                 )}
               </button>
             </div>
+
             {/* Desktop Nav items */}
-            <div className=''>
-              <div className='flex-1 flex items-center justify-center sm:items-stretch sm:justify-start'>
-                <div className='flex-shrink-0 flex items-center'>
+            <div className='flex items-center justify-center sm:items-stretch sm:justify-start'>
+              <div className='flex'>
+                <div className='flex-shrink-1 flex items-center'>
                   {/* Nav Logo Mobile */}
+
                   <a href='#'>
                     <img
                       className='block lg:hidden h-8 w-auto'
@@ -100,8 +102,8 @@ const Navbar = () => {
                   </a>
                 </div>
                 {/* Nav Links Desktop */}
-                <div className='hidden sm:block sm:ml-6'>
-                  <div className='flex space-x-3'>
+                <div className='hidden absolute right-0 sm:block sm:ml-6'>
+                  <div className='flex pt-1 space-x-1 md:space-x-4 lg:space-x-6'>
                     {Links.map((link) => {
                       return (
                         <Link
@@ -112,7 +114,7 @@ const Navbar = () => {
                           offset={-63}
                           to={link.url}
                         >
-                          <a className='px-3 py-2 rounded-md text-sm font-openSansLight'>
+                          <a className='px-3 hover:text-white  text-base font-openSansLight'>
                             {link.name}
                           </a>
                         </Link>
@@ -134,6 +136,7 @@ const Navbar = () => {
                   activeClass='active'
                   smooth
                   duration={600}
+                  offset={-63}
                   spy
                   to={link.url}
                   className='cursor-pointer'
@@ -142,7 +145,7 @@ const Navbar = () => {
                     // toggle if cursor is out of menu
                     onClick={toggle}
                     className='text-gray-300 hover:bg-gray-700 hover:text-white
-                   block px-3 py-2 rounded-md text-base font-medium'
+                   block px-3 py-2 rounded-0 text-sm font-openSansLight'
                   >
                     {link.name}
                   </a>

@@ -1,5 +1,6 @@
 import '../styles/globals.css';
 import Layout from '../components/Layout';
+import Cursor from '../components/Cursor';
 
 import '@fortawesome/fontawesome-svg-core/styles.css'; // import Font Awesome CSS
 import { config } from '@fortawesome/fontawesome-svg-core';
@@ -9,6 +10,8 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Layout>
+        {/* <Cursor /> */}
+
         <Component {...pageProps} />
       </Layout>
     </>

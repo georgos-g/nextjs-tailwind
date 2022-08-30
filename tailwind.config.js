@@ -20,8 +20,12 @@ module.exports = {
         montserratThin: ['Montserrat Thin', 'sans-serif'],
         montserratLight: ['Montserrat Light', 'sans-serif'],
         montserratRegular: ['Montserrat Regular', 'sans-serif'],
+        montserratMiddle: ['Montserrat Middle', 'sans-serif'],
         montserratBold: ['Montserrat Bold', 'sans-serif'],
         montserratBlack: ['Montserrat Black', 'sans-serif'],
+      },
+      colors: {
+        bg_top_bottom: '#777',
       },
     },
   },
