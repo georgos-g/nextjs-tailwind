@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 // import Link from 'next/link';
-import { useRouter } from 'next/router';
+// import { useRouter } from 'next/router';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import { Link } from 'react-scroll';
 
@@ -30,7 +30,7 @@ const Links = [
 ];
 //
 const Navbar = () => {
-  const router = useRouter();
+  // const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
   const [isScroll, setIsScroll] = useState(false);
@@ -54,7 +54,7 @@ const Navbar = () => {
         // Navbar with fixed position and background color
         className={`${
           isScroll
-            ? 'bg-bg_top_bottom text-gray-300 '
+            ? 'bg-bg_top_bottom text-gray-300 duration-7 00'
             : 'bg-transparent text-gray-600'
         } fixed top-0 left-0 right-0 z-20`}
       >
@@ -110,11 +110,11 @@ const Navbar = () => {
                           key={link.id}
                           smooth
                           spy
-                          duration={600}
+                          duration={500}
                           offset={-63}
                           to={link.url}
                         >
-                          <a className='px-3 hover:text-white  text-base font-openSansLight'>
+                          <a className='px-3 hover:text-white text-[0.9em] font-openSansLight'>
                             {link.name}
                           </a>
                         </Link>

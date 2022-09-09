@@ -3,8 +3,9 @@ import Services from './Services';
 import About from './About';
 import Contact from './Contact';
 import Image from 'next/image';
-import { MagicMouse } from '../components/Icons';
+import { MagicMouseIcon } from '../components/Icons';
 import { Link } from 'react-scroll';
+import React from 'react';
 
 export default function Home() {
   return (
@@ -36,7 +37,7 @@ export default function Home() {
             <a className='tracking-[2px] pb-[70px] absolute bottom-0 left-0 right-0 flex justify-center opacity-0 hover:opacity-100 text-[10px] text-slate-300  font-openSansBold '>
               WHAT I DO
             </a>
-            <MagicMouse />
+            <MagicMouseIcon />
           </Link>
         </div>
       </section>

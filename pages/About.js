@@ -4,6 +4,7 @@ export default function About() {
 
     <section id='about' className='bg-orange-400 h-screen'>
       <h1 className=''>About</h1>
+      <img src='img/maus-icon.svg' className=' ' />
     </section>
   );
 }
