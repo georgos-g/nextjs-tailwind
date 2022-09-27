@@ -12,6 +12,10 @@ const nextConfig = {
 
     return config;
   },
+  // Image
+  images: {
+    domains: ['localhost'],
+  },
 };
 
 module.exports = nextConfig;

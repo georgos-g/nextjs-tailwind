@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import Link from 'next/link';
-// import { useRouter } from 'next/router';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import { Link } from 'react-scroll';
 
@@ -61,7 +59,8 @@ const Navbar = () => {
         <div className=' mx-auto px-2 sm:px-6 lg:px-8 '>
           <div className='relative flex items-center justify-between h-16'>
             {/* Mobile menu hamburger button */}
-            <div className='absolute inset-y-0 right-0 flex items-center sm:hidden'>
+            <div className='absolute inset-y-0 right-0 flex items-center md:hidden'>
+              {/* responsive md-hidden */}
               <button
                 onClick={toggle}
                 type='button'
@@ -83,26 +82,26 @@ const Navbar = () => {
               <div className='flex'>
                 <div className='flex-shrink-1 flex items-center'>
                   {/* Nav Logo Mobile */}
-
-                  <a href='#'>
+                  <Link to='home' spy smooth offset={-63} duration={500}>
                     <img
                       className='block lg:hidden h-8 w-auto'
                       src='/img/logo.png'
-                      alt='Logo Georgos Gakis'
+                      alt='Logo Georgos Gakis Mobile'
                     />
-                  </a>
+                  </Link>
 
                   {/* Nav Logo Desktop */}
-                  <a href='#'>
+                  <Link to='home' spy smooth offset={-63} duration={500}>
                     <img
-                      className='hidden lg:block h-8 w-auto'
+                      className='hidden lg:block h-[40px] w-auto'
                       src='/img/logo-large-dark.png'
                       alt='Logo Georgos Gakis'
                     />
-                  </a>
+                  </Link>
                 </div>
                 {/* Nav Links Desktop */}
-                <div className='hidden absolute right-0 sm:block sm:ml-6'>
+                {/* Responsive md:block */}
+                <div className='hidden absolute right-0 md:block sm:ml-6'>
                   <div className='flex pt-1 space-x-1 md:space-x-4 lg:space-x-6'>
                     {Links.map((link) => {
                       return (
@@ -114,7 +113,7 @@ const Navbar = () => {
                           offset={-63}
                           to={link.url}
                         >
-                          <a className='px-3 hover:text-white text-[0.9em] font-openSansLight'>
+                          <a className='px-3 hover:text-white text-[1em] font-openSansLight'>
                             {link.name}
                           </a>
                         </Link>
