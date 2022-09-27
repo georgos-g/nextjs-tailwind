@@ -27,6 +27,14 @@ module.exports = {
       colors: {
         bg_top_bottom: '#777',
       },
+      // transition-opacity
+      transitionProperty: {
+        opacity: 'opacity_gg',
+        transitionProperty: 'opacity, transform',
+        transitionTimingFunction: 'cubic-bezier(0.8, 0, 0.2, 1)',
+        transitionDuration: '500ms',
+        transitionDelay: '0ms',
+      },
     },
   },
   plugins: [],

@@ -2,47 +2,35 @@ import Head from 'next/head';
 import Services from './Services';
 import About from './About';
 import Contact from './Contact';
-import Posts from './Posts';
 import Image from 'next/future/image';
 import { MagicMouseIcon } from '../components/Icons';
 import { MailIcon } from '../components/Icons';
 import { Link } from 'react-scroll';
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { Cursor, useTypewriter } from 'react-simple-typewriter';
 
-// Create Function who Change text every 1 second React useEffect
+// import dynamic from 'next/dynamic';
+// import { Suspense } from 'react';
 
-const titles = [
-  {
-    job_title: '(JUNIOR) FRONTEND DEVELOPER',
-  },
-  {
-    job_title: 'MEDIA DESIGNER',
-  },
-  {
-    job_title: 'WEB DESIGNER',
-  },
-  {
-    job_title: 'PALOMAS BABAKA',
-  },
-  {
-    job_title: 'AMALIAS BABAKA',
-  },
-];
+// const Posts = dynamic(() => import('./Posts'), { ssr: false });
 
-export default function Home() {
-  //  Change name of title array every 1.5 sec with useState
-  const [title, setTitle] = useState(titles[0].job_title);
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const index = titles.findIndex((item) => item.job_title === title);
-      if (index === titles.length - 1) {
-        setTitle(titles[0].job_title);
-      } else {
-        setTitle(titles[index + 1].job_title);
-      }
-    }, 1700);
-    return () => clearInterval(interval);
-  }, [title]);
+import Posts from './Posts';
+
+export default function Home({ posts }) {
+  const [titleTypewriter, count] = useTypewriter({
+    words: [
+      '(JUNIOR) FRONTEND DEVELOPER',
+      'MEDIA DESIGNER',
+      'WEB DESIGNER',
+      'PALOMAS BABAKA',
+      'AMALIAS BABAKA',
+    ],
+    loop: true,
+    typeSpeed: 100,
+    deleteSpeed: 30,
+    delaySpeed: 1500,
+  });
 
   return (
     <>
@@ -63,19 +51,64 @@ export default function Home() {
           />
           <div className='h-screen flex flex-col justify-center pl-14 pb-20'>
             <h2 className='drop-shadow-lg shadow-slate-100 font-openSansLight text-left  text-gray-400 text-[1em] md:text-[1.4em] tracking-[3px]'>
-              Hello, I'm
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  y: 0,
+                }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  duration: 1.7,
+                  delay: 0,
+                }}
+              >
+                Hello, I'm
+              </motion.div>
             </h2>
             <h1 className='font-montserratBold text-[2em] md:text-[3em] tracking-[9px] text-gray-100'>
-              GEORGOS
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  y: 0,
+                }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  duration: 1.7,
+                  delay: 1.5,
+                }}
+              >
+                GEORGOS
+              </motion.div>
             </h1>
-            {/* toggle thru titles each second*/}
-            <h2 className='drop-shadow-lg text-gray-300 shadow-slate-100 font-openSansLight text-left text-[1em] md:text-[1.2em] tracking-[3px]'>
-              {title}
-            </h2>
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 0,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                duration: 2.5,
+                delay: 0,
+              }}
+            >
+              <h2 className='drop-shadow-lg text-gray-300 shadow-slate-100 font-openSansLight text-left text-[1em] md:text-[1.2em] tracking-[3px]'>
+                <span>{titleTypewriter}</span>_
+                <Cursor cursorColor='gray' />
+              </h2>
+            </motion.div>
           </div>
           {/* Button say hello */}
           {/* <div className='pt-12'> */}
-          <div className='absolute pl-14 bottom-80 '>
+          <div className='absolute pl-14 bottom-80'>
             <Link to='contact' spy smooth offset={-63} duration={500} key='32'>
               <a className='flex tracking-[2px] py-[8px] px-6 rounded-md  text-[16px] bg-gray-800 text-slate-300 hover:bg-orange-500  font-openSansBold hover:border-[1px] hover:border-slate-300  mt-[3px] '>
                 SAY HELLO
@@ -99,7 +132,12 @@ export default function Home() {
         </div>
       </section>
       <Services />
+      {/* <Suspense fallback={<div>Loading...</div>}> */}
       {/* <Posts /> */}
+      {/* </Suspense> */}
+
+      {/* <Posts /> */}
+
       <About />
       <Contact />
     </>

@@ -1,3 +1,4 @@
+import React from 'react';
 import { ApolloClient, InMemoryCache } from '@apollo/client';
 import { GET_ALL_POSTS } from '../graphql/queries';
 import Image from 'next/future/image';
@@ -6,6 +7,7 @@ const Posts = ({ posts }) => {
   return (
     <div>
       <h1>Posts</h1>
+
       {posts.map((post) => (
         <div key={post.id}>
           <h2>{post.title}</h2>
