@@ -85,6 +85,11 @@
     color: white;
     font-weight: 400;
   }
+  .active_category {
+    color: white;
+    background: #000;
+    font-weight: 400;
+  }
 
   .section_header {
     font-size: 1.5em;
