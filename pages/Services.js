@@ -16,8 +16,8 @@ export default function Services() {
 
         <h2 className='section_sub_header mb-2'>SOME OF MY SKILLS</h2>
       </div>
-      <div className='flex w-full h-full items-center'>
-        <div className=' w-1/2 h-full '>
+      <div className='flex w-full'>
+        <div className=' w-1/2  '>
           <div className='flex p-1 flex-col'>
             <progress
               className='progress progress-primary w-56'
@@ -46,7 +46,7 @@ export default function Services() {
             ></progress>
           </div>
         </div>
-        <div className=' w-1/2 h-full bg-green-900'>HHsqssqsqsH</div>
+        <div className=' w-1/2  bg-green-900'>HHsqssqsqsH</div>
       </div>
     </div>
   );

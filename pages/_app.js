@@ -1,4 +1,5 @@
 import '../styles/globals.css';
+import Script from 'next/script';
 import Layout from '../components/Layout';
 import Cursor from '../components/Cursor';
 import App from 'next/app';
@@ -10,7 +11,6 @@ import { config } from '@fortawesome/fontawesome-svg-core';
 config.autoAddCss = false;
 
 function MyApp({ Component, pageProps }) {
-  // const MyApp = ({ Component, pageProps }) => {
   return (
     <>
       <Layout>
@@ -18,6 +18,11 @@ function MyApp({ Component, pageProps }) {
 
         <Component {...pageProps} />
       </Layout>
+      <Script
+        id='isotope'
+        strategy='beforeInteractive'
+        src='/js/isotope.pkgd.min.js'
+      ></Script>
     </>
   );
 }
