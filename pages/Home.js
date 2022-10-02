@@ -89,43 +89,35 @@ function HomeSection() {
                 <Cursor cursorColor='gray' />
               </h2>
             </motion.div>
+            {/* ------ / Button say hello -------- */}
+
+            <motion.div
+              className='z-10'
+              initial={{
+                opacity: 0,
+                x: -200,
+              }}
+              animate={{
+                opacity: 1,
+                x: 0,
+              }}
+              transition={{
+                duration: 2,
+                delay: 4,
+              }}
+            >
+              <div className='z-10 pt-12 w-[180px] '>
+                <Link to='contact' spy smooth duration={500} key='32'>
+                  <a className='flex tracking-[2px] py-[8px] px-6 rounded-md  text-[16px] bg-gray-800 text-slate-300 hover:bg-orange-500  font-openSansBold  mt-[3px] '>
+                    SAY HELLO
+                    <span className='pl-2 '>
+                      <MailIcon className='' />
+                    </span>
+                  </a>
+                </Link>
+              </div>
+            </motion.div>
           </div>
-
-          {/* ------ / Button say hello -------- */}
-
-          <motion.div
-            initial={{
-              opacity: 0,
-              x: 0,
-            }}
-            animate={{
-              opacity: 1,
-              x: 0,
-            }}
-            transition={{
-              duration: 1,
-              delay: 4,
-            }}
-          >
-            {/* <div className='pt-12'> */}
-            <div className='absolute pl-14 bottom-80'>
-              <Link
-                to='contact'
-                spy
-                smooth
-                offset={-63}
-                duration={500}
-                key='32'
-              >
-                <a className='flex tracking-[2px] py-[8px] px-6 rounded-md  text-[16px] bg-gray-800 text-slate-300 hover:bg-orange-500  font-openSansBold hover:border-[0px] hover:border-slate-300  mt-[3px] '>
-                  SAY HELLO
-                  <span className='pl-2 '>
-                    <MailIcon className='' />
-                  </span>
-                </a>
-              </Link>
-            </div>
-          </motion.div>
           {/* ------ / Button -------- */}
         </div>
 

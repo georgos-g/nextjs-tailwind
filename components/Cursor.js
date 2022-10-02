@@ -1,5 +1,5 @@
 import React from 'react';
-import mouseEffect from './common/mouseEffect';
+import mouseEffect from '../common/mouseEffect';
 
 const Cursor = () => {
   React.useEffect(() => {

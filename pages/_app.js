@@ -2,6 +2,7 @@ import '../styles/globals.css';
 import Script from 'next/script';
 import Layout from '../components/Layout';
 import Cursor from '../components/Cursor';
+import ScrollToTop from '../components/ScrollToTop';
 import App from 'next/app';
 
 // import Font Awesome CSS
@@ -13,11 +14,13 @@ config.autoAddCss = false;
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      <Cursor />
       <Layout>
         {/* <Cursor /> */}
 
         <Component {...pageProps} />
       </Layout>
+      <ScrollToTop />
       <Script
         id='isotope'
         strategy='beforeInteractive'

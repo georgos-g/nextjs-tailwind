@@ -37,14 +37,23 @@ export async function getStaticProps() {
     query: GET_ALL_POSTS_AND_CATEGORIES,
   });
 
+  //* map thru posts and save the results in a list sorted by date */
+
   const posts = data.posts.data.map((post) => {
     return {
       id: post.id,
+      date: post.attributes.Date,
       title: post.attributes.Title,
+      description: post.attributes.Description,
       content: post.attributes.Content,
       cover:
         process.env.STRAPI_ENDPOINT + post.attributes.Cover.data.attributes.url,
       alt: post.attributes.Cover.data.attributes.alternativeText,
+      // Seo
+      seo: {
+        title: post.attributes.PostSeo.SeoTitle,
+        description: post.attributes.PostSeo.SeoDescription,
+      },
 
       // get all categories from each post
       categories: post.attributes.categories.data.map((category) => {
@@ -57,7 +66,6 @@ export async function getStaticProps() {
   const allCategories = data.categories.data.map((category) => {
     return {
       id: category.id,
-
       category: category.attributes.Category,
     };
   });

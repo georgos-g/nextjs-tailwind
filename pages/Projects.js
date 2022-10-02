@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Image from 'next/future/image';
-import initIsotope from '../components/common/initIsotope';
+import initIsotope from '../common/initIsotope';
 
 export default function Projects({ posts, allCategories }) {
   useEffect(() => {
@@ -10,29 +10,29 @@ export default function Projects({ posts, allCategories }) {
   }, []);
   return (
     <>
-      <div id='projects' className='h-screen pt-0 bg-gray-400'>
-        {/* Text */}
+      <div id='projects' className='h-screen pt-0 mx-auto bg-gray-400'>
+        {/* ========= Text Header ========== */}
         <div className='flex flex-col items-center mx-auto text-center'>
           <h1 className='mt-12 section_header'>FEATURED PROJECTS</h1>
 
           <h2 className='mb-8 section_sub_header'>SOME EXAMPLES OF MY WORK</h2>
         </div>
 
-        {/* ====== Nav-Categories Wrapper ====== */}
+        {/* ====== Nav-Categories  ======= */}
         <div className='flex justify-center w-full mx-auto cursor-pointer'>
           {/* set 'filtering' to css activate filtering  */}
-          <div className='flex filtering'>
-            <span
-              data-filter='*'
-              className='p-1 uppercase active hover:text-gray-50'
-            >
-              All
-            </span>
-            {/* map thru allCategories and place the results in a list    */}
-            {allCategories.map((navCategory, index) => {
-              return (
-                <div key={index}>
-                  <div className='p-1 filter'>
+          <div className='filtering'>
+            <div className='flex filter'>
+              <span
+                data-filter='*'
+                className='p-2 uppercase active hover:text-gray-50'
+              >
+                All
+              </span>
+              {/* map thru allCategories and place the results in a list    */}
+              {allCategories.map((navCategory, index) => {
+                return (
+                  <div className='p-2 filter' key={index}>
                     <span
                       className='uppercase hover:text-gray-50'
                       data-filter={`.${navCategory.category}`}
@@ -40,39 +40,61 @@ export default function Projects({ posts, allCategories }) {
                       {navCategory.category}
                     </span>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </div>
 
-        {/*  ========== Posts Wrapper =========*/}
-        <div className='flex justify-center text-center gallery bg-fuchsia-400'>
-          {/* <div className='grid text-center gallery place-items-stretch bg-fuchsia-400 '> */}
-          {posts.map((post) => (
-            <div className='' key={post.id}>
+        {/*  ========== Posts Content Wrapper =========*/}
+        <div className='max-w-[1920px] flex flex-wrap justify-center w-full mx-auto gallery'>
+          {/* map thru posts and save the results in a list sorted by date */}
+          {posts.map((post, index) => (
+            <div className='' key={index}>
+              {/* ======= Item ======== */}
               <div
-                // set 'items' in css class to activate filtering
-                className={`items ${post.categories
-                  //  Replace from ${post.categories} all commas with ' '
+                // set 'items' and category in css class to activate filtering
+                className={`lg:w-1/3 md:w-1/2  items ${post.categories
                   .toString()
                   .replace(/,/g, ' ')} `}
               >
-                <div className='flex  flex-col w-[450px] h-[300px]  bg-orange-500  p-[3px]'>
-                  <span
-                    data-filter={post.categories.toString().replace(/,/g, ' ')}
+                {/* Img and Text */}
+
+                <div className='z-1'>
+                  <div
+                    className={`flex w-full h-full flex-col justify-center `}
                   >
-                    {post.categories.toString().replace(/,/g, ' ')}
-                  </span>
-                  {/* {console.log('post.category: ', post.categories)} */}
-                  <Image
-                    className='object-cover'
-                    width={700}
-                    height={300}
-                    src={post.cover}
-                    alt={post.alt}
-                  />
-                  <p className='section_body'>{post.content}</p>
+                    {/* {console.log('post.category: ', post.categories)} */}
+                    <Image
+                      className='object-cover'
+                      width={999}
+                      height={444}
+                      src={post.cover}
+                      alt={post.alt}
+                    />
+                    {/* Hover  */}
+                    <div className='absolute z-10 w-full h-full opacity-100 cursor-pointer md:opacity-0 bg-black/70 md:hover:opacity-100 hover:transition hover:ease-in-out hover:duration-700'>
+                      {/* Hover Content */}
+                      <div className='flex flex-col justify-center w-full h-full px-8'>
+                        {/* Category */}
+                        <span
+                          data-filter={post.categories
+                            .toString()
+                            .replace(/,/g, ' ')}
+                        >
+                          {post.categories.toString().replace(/,/g, ' ')}
+                        </span>
+                        {/* Title */}
+                        <h1 className='mb-2 text-[1.25em] text-white uppercase'>
+                          {post.title}
+                        </h1>
+                        {/* Description */}
+                        <p className='text-gray-400 text-[1em] pb-6 uppercase'>
+                          {post.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
