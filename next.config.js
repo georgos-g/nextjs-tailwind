@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
+const urlEnv = process.env.NEXT_PUBLIC_API_ENDPOINT;
+// remove https and port from url
+const apiUrl = urlEnv.replace(/^https?:\/\//, '').replace(/:\d+/, '');
+
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
@@ -12,9 +16,10 @@ const nextConfig = {
 
     return config;
   },
-  // Image
+
+  // Images
   images: {
-    domains: ['localhost'],
+    domains: [apiUrl],
   },
 };
 

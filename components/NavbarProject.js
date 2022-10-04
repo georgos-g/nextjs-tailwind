@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
-import { Link } from 'react-scroll';
+// import { Link } from 'react-scroll';
+import Link from 'next/link';
 
 // list to map the links
 
@@ -8,31 +9,31 @@ const Links = [
   {
     id: 1,
     name: 'HOME',
-    url: 'home',
+    url: '/',
   },
   {
     id: 2,
     name: 'SERVICES',
-    url: 'services',
+    url: '#services',
   },
   {
     id: 3,
     name: 'PROJECTS',
-    url: 'projects',
+    url: '#projects',
   },
   {
     id: 4,
     name: 'ABOUT',
-    url: 'about',
+    url: '#about',
   },
   {
     id: 5,
     name: 'CONTACT',
-    url: 'contact',
+    url: '#contact',
   },
 ];
 //
-const Navbar = () => {
+const NavbarProject = () => {
   // const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
@@ -87,7 +88,8 @@ const Navbar = () => {
               <div className='flex'>
                 <div className='flex items-center flex-shrink-1'>
                   {/* Nav Logo Mobile */}
-                  <Link to='home' spy smooth offset={-63} duration={500}>
+
+                  <Link href='/'>
                     <img
                       className='block w-auto h-8 lg:hidden'
                       src='/img/logo.png'
@@ -96,7 +98,8 @@ const Navbar = () => {
                   </Link>
 
                   {/* Nav Logo Desktop */}
-                  <Link to='home' spy smooth offset={-63} duration={500}>
+
+                  <Link href='/'>
                     <img
                       className='hidden lg:block h-[40px] w-auto'
                       src='/img/logo-large-dark.png'
@@ -110,14 +113,7 @@ const Navbar = () => {
                   <div className='flex pt-1 space-x-1 md:space-x-4 lg:space-x-6'>
                     {Links.map((link) => {
                       return (
-                        <Link
-                          key={link.id}
-                          smooth
-                          spy
-                          duration={500}
-                          offset={-63}
-                          to={link.url}
-                        >
+                        <Link href={`/${link.url}`} key={link.id}>
                           <a className='px-3 hover:text-white text-[1em] font-openSansLight'>
                             {link.name}
                           </a>
@@ -135,16 +131,7 @@ const Navbar = () => {
             <div className='px-3 pt-1 pb-1 space-y-1 '></div>
             {Links.map((link) => {
               return (
-                <Link
-                  key={link.id}
-                  activeClass='active'
-                  smooth
-                  duration={600}
-                  offset={-63}
-                  spy
-                  to={link.url}
-                  className='cursor-pointer'
-                >
+                <Link href={`/${link.url}`} key={link.id}>
                   <a
                     // toggle if cursor is out of menu
                     onClick={toggle}
@@ -161,4 +148,4 @@ const Navbar = () => {
     </>
   );
 };
-export default Navbar;
+export default NavbarProject;

@@ -1,15 +1,16 @@
 import React from 'react';
 import Head from 'next/head';
-import Navbar from './Navbar';
 import Footer from './Footer';
 import Container from './Container';
 
 const Layout = ({ children }) => {
   return (
     <>
-      <Navbar />
       <Container>
-        {/* <Head /> */}
+        <Head>
+          <title>Georgos Gakis | Fronend Developer & Media Designer </title>
+          <link rel='icon' href='/favicon.ico' />
+        </Head>
         {children}
         <Footer />
       </Container>

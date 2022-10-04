@@ -10,10 +10,12 @@ function HomeSection() {
   const [titleTypewriter, count] = useTypewriter({
     words: [
       '(JUNIOR) FRONTEND DEVELOPER',
-      'MEDIA DESIGNER',
-      'WEB DESIGNER',
+      // 'MEDIA DESIGNER',
+      // 'WEB DESIGNER',
       'PALOMAS BABAKA',
       'AMALIAS BABAKA',
+      // 'HALLO FREUNDE',
+      // 'WILLKOMMEN',
     ],
     loop: true,
     typeSpeed: 100,
@@ -95,11 +97,11 @@ function HomeSection() {
               className='z-10'
               initial={{
                 opacity: 0,
-                x: -200,
+                y: 80,
               }}
               animate={{
                 opacity: 1,
-                x: 0,
+                y: 0,
               }}
               transition={{
                 duration: 2,
