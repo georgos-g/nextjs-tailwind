@@ -1,10 +1,9 @@
-// create footer component fixed to bottom of page with links to social media with font-awesome icons and tailwindcss
 import React from 'react';
 import { SocialIcon } from 'react-social-icons';
 
 export default function Footer() {
   return (
-    <footer className='bg-bg_top_bottom text-gray-300 font-montserratThin text-sm text-center py-3'>
+    <footer className='py-3 text-sm text-center text-gray-300 bg-bg_top_bottom font-montserratThin'>
       {/* create a div fixed to bottom of page */}
       <div className='flex justify-center '>
         <SocialIcon

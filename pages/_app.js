@@ -14,7 +14,7 @@ config.autoAddCss = false;
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Cursor />
+      {/* <Cursor /> */}
       <Layout>
         {/* <Cursor /> */}
 

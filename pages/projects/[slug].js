@@ -5,8 +5,6 @@ import { GET_ALL_POSTS_AND_CATEGORIES } from '../../lib/queries';
 
 import NavbarProject from '../../components/NavbarProject';
 
-// const url = process.env;
-
 // get static paths for each post
 export async function getStaticPaths() {
   const client = new ApolloClient({
@@ -58,20 +56,28 @@ export default function Project({ post }) {
   return (
     <>
       <NavbarProject />
-      <div className='flex flex-col justify-center h-screen '>
-        <h1>{post.attributes.Title}</h1>
-        <Image
-          className='object-cover'
-          width={666}
-          height={333}
-          src={
-            process.env.NEXT_PUBLIC_API_ENDPOINT +
-            post.attributes.Cover.data.attributes.url
-          }
-          alt={post.attributes.Cover.data.attributes.alternativeText}
-        />
-        <p>{post.attributes.Description}</p>
-        <p>{post.attributes.Content}</p>
+      <div className='pt-[63px]'></div>
+      <div className='px-8 py-4 bg-gray-600 min-h-72'>
+        <div className=' max-w-7xl'>
+          <h1 className='project_title'>{post.attributes.Title}</h1>
+          <h2 className='project_sub_title'>{post.attributes.Description}</h2>
+        </div>
+        {/* Image */}
+        <div className='flex flex-col justify-center '>
+          <Image
+            className='object-cover py-4'
+            width={666}
+            height={333}
+            src={
+              process.env.NEXT_PUBLIC_API_ENDPOINT +
+              post.attributes.Cover.data.attributes.url
+            }
+            alt={post.attributes.Cover.data.attributes.alternativeText}
+          />
+          {/* Text */}
+
+          <p>{post.attributes.Content}</p>
+        </div>
       </div>
     </>
   );

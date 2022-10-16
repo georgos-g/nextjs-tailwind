@@ -11,7 +11,7 @@ export default function Projects({ posts, allCategories }) {
   }, []);
   return (
     <>
-      <div id='projects' className='h-screen pt-0 mx-auto bg-gray-400'>
+      <div id='projects' className='h-full pt-0 mx-auto bg-gray-400'>
         {/* ========= Text Header ========== */}
         <div className='flex flex-col items-center mx-auto text-center'>
           <h1 className='mt-12 section_header'>FEATURED PROJECTS</h1>
@@ -33,7 +33,7 @@ export default function Projects({ posts, allCategories }) {
               {/* map thru allCategories and place the results in a list    */}
               {allCategories.map((navCategory, index) => {
                 return (
-                  <div className='p-2 filter' key={index}>
+                  <div className='px-1 py-2 md:px2 filter ' key={index}>
                     <span
                       className='uppercase hover:text-gray-50'
                       data-filter={`.${navCategory.category}`}
@@ -48,27 +48,26 @@ export default function Projects({ posts, allCategories }) {
         </div>
 
         {/*  ========== Posts Content Wrapper =========*/}
-        <div className='max-w-[1920px] flex flex-wrap justify-center w-full mx-auto gallery'>
+        <div className='max-w-[1920px] pt-4 flex flex-col md:flex-row flex-wrap justify-center w-full mx-auto gallery'>
           {/* map thru posts and save the results in a list sorted by date */}
           {posts.map((post, index) => (
             <div className='' key={index}>
-              {console.log('post.slug: ', post.slug)}
+              {/* {console.log('post.slug: ', post.slug)} */}
               {/* {console.log('post.slug: ', `/projects/${post.slug}`)} */}
-              <Link href={`projects/${post.slug}/`} key={post.id}>
+              <Link href={`projects/${post.slug}`} key={post.id}>
                 {/* ======= Item ======== */}
                 <div
                   // set 'items' and category in css class to activate filtering
-                  className={`lg:w-1/3 md:w-1/2  items ${post.categories
+                  className={`lg:w-1/3 md:w-1/2  pb-1 md:pb-0 items ${post.categories
                     .toString()
+                    // replace comma with space
                     .replace(/,/g, ' ')} `}
                 >
                   {/* Img and Text */}
-
                   <div className='z-1'>
                     <div
                       className={`flex w-full h-full flex-col justify-center `}
                     >
-                      {/* {console.log('post.category: ', post.categories)} */}
                       <Image
                         className='object-cover'
                         width={999}

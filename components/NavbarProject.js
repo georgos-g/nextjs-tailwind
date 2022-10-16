@@ -39,28 +39,17 @@ const NavbarProject = () => {
   const toggle = () => setIsOpen(!isOpen);
   const [isScroll, setIsScroll] = useState(false);
 
-  // if scroll position is below 100px set state for isScroll to false
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setIsScroll(true);
-      } else {
-        setIsScroll(false);
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
     <>
       <nav
         // Navbar with fixed position and background color
-        className={`${
-          isScroll
-            ? 'bg-bg_top_bottom text-gray-300 duration-7 00'
-            : 'bg-transparent text-gray-600'
-        } fixed top-0 left-0 right-0 z-20`}
+        className='fixed top-0 left-0 right-0 z-20 text-gray-800 bg-bg_top_bottom'
+
+        // {`${
+        //   isScroll
+        //     ? 'bg-bg_top_bottom text-gray-300 duration-700'
+        //     : 'bg-transparent text-gray-600'
+        // } fixed top-0 left-0 right-0 z-20`}
       >
         <div className='px-2 mx-auto sm:px-6 lg:px-8'>
           <div className='relative flex items-center justify-between h-16'>
@@ -112,9 +101,19 @@ const NavbarProject = () => {
                 <div className='absolute right-0 hidden md:block sm:ml-6'>
                   <div className='flex pt-1 space-x-1 md:space-x-4 lg:space-x-6'>
                     {Links.map((link) => {
+                      console.log('link.url: ', link.url);
                       return (
-                        <Link href={`/${link.url}`} key={link.id}>
-                          <a className='px-3 hover:text-white text-[1em] font-openSansLight'>
+                        <Link key={link.id} href={`/${link.url}`}>
+                          <a
+                            // set  class to active for link.url: projects
+                            className={`
+                            ${
+                              link.url === '#projects'
+                                ? 'active'
+                                : 'text-gray-300'
+                            }      
+                          px-3 hover:text-white text-[1em] font-openSansLight`}
+                          >
                             {link.name}
                           </a>
                         </Link>

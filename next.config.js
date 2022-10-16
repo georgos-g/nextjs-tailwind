@@ -3,8 +3,9 @@ const urlEnv = process.env.NEXT_PUBLIC_API_ENDPOINT;
 // remove https and port from url
 const apiUrl = urlEnv.replace(/^https?:\/\//, '').replace(/:\d+/, '');
 
-const nextConfig = {
+module.exports = {
   reactStrictMode: true,
+
   swcMinify: true,
   // SVG
   webpack(config) {
@@ -13,7 +14,6 @@ const nextConfig = {
       issuer: /\.[jt]sx?$/,
       use: ['@svgr/webpack'],
     });
-
     return config;
   },
 
@@ -22,5 +22,3 @@ const nextConfig = {
     domains: [apiUrl],
   },
 };
-
-module.exports = nextConfig;

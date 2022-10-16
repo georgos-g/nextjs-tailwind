@@ -104,6 +104,7 @@
     font-size: 1.5em;
     font-family: 'Montserrat Middle';
     letter-spacing: 4px;
+    text-transform: uppercase;
   }
 
   .section_sub_header {
@@ -117,6 +118,20 @@
     font-family: 'Open Sans 400';
     color: rgb(236, 222, 204);
     font-size: 1em;
+  }
+  .project_title {
+    font-family: 'Montserrat Middle';
+    font-size: 1.4em;
+    color: #000;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  .project_sub_title {
+    font-family: 'Montserrat Light';
+    font-size: 1.2em;
+    color: #000;
+    letter-spacing: 1px;
+    text-transform: uppercase;
   }
 
   /* ====================== [ Cursor Style ] ====================== */

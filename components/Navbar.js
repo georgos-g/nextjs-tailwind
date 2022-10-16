@@ -57,7 +57,7 @@ const Navbar = () => {
         // Navbar with fixed position and background color
         className={`${
           isScroll
-            ? 'bg-bg_top_bottom text-gray-300 duration-7 00'
+            ? 'bg-bg_top_bottom text-gray-800 duration-700'
             : 'bg-transparent text-gray-600'
         } fixed top-0 left-0 right-0 z-20`}
       >
@@ -118,9 +118,9 @@ const Navbar = () => {
                           offset={-63}
                           to={link.url}
                         >
-                          <a className='px-3 hover:text-white text-[1em] font-openSansLight'>
+                          <div className='px-3 hover:text-white text-[1em] font-openSansLight'>
                             {link.name}
-                          </a>
+                          </div>
                         </Link>
                       );
                     })}
@@ -145,13 +145,13 @@ const Navbar = () => {
                   to={link.url}
                   className='cursor-pointer'
                 >
-                  <a
+                  <div
                     // toggle if cursor is out of menu
                     onClick={toggle}
                     className='block px-3 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white rounded-0 font-openSansLight'
                   >
                     {link.name}
-                  </a>
+                  </div>
                 </Link>
               );
             })}

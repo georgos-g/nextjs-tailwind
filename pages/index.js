@@ -4,10 +4,10 @@ import About from './about';
 import Contact from './contact';
 import HomeSection from './home';
 import Projects from './projects';
+import Navbar from '../components/Navbar';
 
 import { ApolloClient, InMemoryCache } from '@apollo/client';
 import { GET_ALL_POSTS_AND_CATEGORIES } from '../lib/queries';
-import Navbar from '../components/Navbar';
 
 export default function Home({ posts, allCategories }) {
   return (
@@ -69,7 +69,6 @@ export async function getStaticProps() {
       category: category.attributes.Category,
     };
   });
-  // console.log('allCategories: ', allCategories);
 
   return {
     props: {
