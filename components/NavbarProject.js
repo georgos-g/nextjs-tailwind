@@ -92,7 +92,7 @@ const NavbarProject = () => {
                 {/* Nav Links Desktop */}
                 {/* Responsive md:block */}
                 <div className='absolute right-0 hidden ml-3 md:block md:ml-6'>
-                  <div className='flex pt-1 space-x-1 md:space-x-3 lg:space-x-6'>
+                  <div className='flex pt-2 space-x-1 md:space-x-3 lg:space-x-6'>
                     {Links.map((link) => {
                       // console.log('link.url: ', link.url);
                       return (

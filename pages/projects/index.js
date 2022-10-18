@@ -13,13 +13,13 @@ export default function Projects({ posts, allCategories }) {
     <>
       <div
         id='projects'
-        className='h-auto pt-0 mx-auto bg-gray-400 md:h-screen '
+        className='h-auto pt-0 mx-auto bg-gray-200 md:h-screen '
       >
         {/* ========= Text Header ========== */}
         <div className='flex flex-col items-center mx-auto text-center'>
-          <h1 className='mt-12 section_header'>FEATURED PROJECTS</h1>
+          <h1 className='mt-12 mb-10 section_header'>FEATURED PROJECTS</h1>
 
-          <h2 className='mb-8 section_sub_header'>SOME EXAMPLES OF MY WORK</h2>
+          <h2 className='mb-10 section_sub_header'>SOME EXAMPLES OF MY WORK</h2>
         </div>
 
         {/* ====== Nav-Categories  ======= */}
@@ -28,25 +28,22 @@ export default function Projects({ posts, allCategories }) {
           <div className='filtering'>
             <div className='flex filter'>
               <span
+                className='px-1 py-1 text-sm text-gray-800 md:text-base md:px-3 active_category hover:text-gray-400'
                 data-filter='*'
-                className='px-1 py-2 text-sm uppercase md:text-base md:px-3 active hover:text-gray-50'
               >
-                All
+                ALL
               </span>
               {/* map thru allCategories and place the results in a list    */}
               {allCategories.map((navCategory, index) => {
                 return (
-                  <div
-                    className='px-1 py-2 text-sm md:text-base md:px-3 filter '
-                    key={index}
-                  >
+                  <>
                     <span
-                      className='uppercase hover:text-gray-50'
+                      className='px-1 py-1 text-sm text-gray-800 uppercase hover:text-gray-400 md:text-base md:px-3'
                       data-filter={`.${navCategory.category}`}
                     >
                       {navCategory.category}
                     </span>
-                  </div>
+                  </>
                 );
               })}
             </div>
