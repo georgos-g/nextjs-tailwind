@@ -3,7 +3,7 @@ import { SocialIcon } from 'react-social-icons';
 
 export default function Footer() {
   return (
-    <footer className='py-3 text-sm text-center text-gray-300 bg-bg_top_bottom font-montserratThin'>
+    <footer className='py-3 text-sm text-center text-gray-300 bg-nav_header_footer font-montserratThin'>
       {/* create a div fixed to bottom of page */}
       <div className='flex justify-center '>
         <SocialIcon

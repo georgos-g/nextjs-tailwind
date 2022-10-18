@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
   important: true,
   content: [
@@ -6,6 +7,12 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    // Adding smaller breakpoint
+    screens: {
+      xs: '475px',
+      ...defaultTheme.screens,
+    },
+
     extend: {
       backgroundImage: {
         bg_home: "url('/img/hero_bg.jpg')",
@@ -25,7 +32,7 @@ module.exports = {
         montserratBlack: ['Montserrat Black', 'sans-serif'],
       },
       colors: {
-        bg_top_bottom: '#777',
+        nav_header_footer: ' #FFFFF0',
       },
       // transition-opacity
       transitionProperty: {

@@ -94,6 +94,13 @@
     color: white;
     font-weight: 400;
   }
+
+  .activeGray {
+    color: black;
+    font-weight: 400;
+    text-shadow: #000000 0px 0px 1px;
+  }
+
   .active_category {
     color: white;
     background: #000;

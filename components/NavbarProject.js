@@ -37,19 +37,12 @@ const NavbarProject = () => {
   // const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
-  const [isScroll, setIsScroll] = useState(false);
 
   return (
     <>
       <nav
         // Navbar with fixed position and background color
-        className='fixed top-0 left-0 right-0 z-20 text-gray-800 bg-bg_top_bottom'
-
-        // {`${
-        //   isScroll
-        //     ? 'bg-bg_top_bottom text-gray-300 duration-700'
-        //     : 'bg-transparent text-gray-600'
-        // } fixed top-0 left-0 right-0 z-20`}
+        className='fixed top-0 left-0 right-0 z-20 text-gray-800 bg-nav_header_footer'
       >
         <div className='px-2 mx-auto sm:px-6 lg:px-8'>
           <div className='relative flex items-center justify-between h-16'>
@@ -98,10 +91,10 @@ const NavbarProject = () => {
                 </div>
                 {/* Nav Links Desktop */}
                 {/* Responsive md:block */}
-                <div className='absolute right-0 hidden md:block sm:ml-6'>
-                  <div className='flex pt-1 space-x-1 md:space-x-4 lg:space-x-6'>
+                <div className='absolute right-0 hidden ml-3 md:block md:ml-6'>
+                  <div className='flex pt-1 space-x-1 md:space-x-3 lg:space-x-6'>
                     {Links.map((link) => {
-                      console.log('link.url: ', link.url);
+                      // console.log('link.url: ', link.url);
                       return (
                         <Link key={link.id} href={`/${link.url}`}>
                           <a
@@ -109,10 +102,10 @@ const NavbarProject = () => {
                             className={`
                             ${
                               link.url === '#projects'
-                                ? 'active'
-                                : 'text-gray-300'
-                            }      
-                          px-3 hover:text-white text-[1em] font-openSansLight`}
+                                ? 'activeGray'
+                                : 'text-gray-800'
+                            } 
+                            px-1 md:px-2 lg:px-3 hover:text-black text-[1em] font-openSansLight`}
                           >
                             {link.name}
                           </a>
@@ -126,18 +119,20 @@ const NavbarProject = () => {
           </div>
 
           {/* Mobile menu, show/hide based on menu state  */}
-          <div className={`${isOpen ? '' : 'hidden'} sm:hidden pb-4`}>
+          <div className={`${isOpen ? '' : 'hidden'} md:hidden pb-4`}>
             <div className='px-3 pt-1 pb-1 space-y-1 '></div>
             {Links.map((link) => {
               return (
                 <Link href={`/${link.url}`} key={link.id}>
-                  <a
-                    // toggle if cursor is out of menu
-                    onClick={toggle}
-                    className='block px-3 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white rounded-0 font-openSansLight'
-                  >
-                    {link.name}
-                  </a>
+                  <div className='mb-1 bg-gray-300'>
+                    <a
+                      // toggle if cursor is out of menu
+                      onClick={toggle}
+                      className='block px-3 py-2 text-sm text-gray-800 hover:bg-gray-700 hover:text-white rounded-0 font-openSansLight'
+                    >
+                      {link.name}
+                    </a>
+                  </div>
                 </Link>
               );
             })}

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Image from 'next/future/image';
 import initIsotope from '../../common/initIsotope';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 export default function Projects({ posts, allCategories }) {
   useEffect(() => {
     setTimeout(() => {
@@ -11,7 +11,10 @@ export default function Projects({ posts, allCategories }) {
   }, []);
   return (
     <>
-      <div id='projects' className='h-full pt-0 mx-auto bg-gray-400'>
+      <div
+        id='projects'
+        className='h-auto pt-0 mx-auto bg-gray-400 md:h-screen '
+      >
         {/* ========= Text Header ========== */}
         <div className='flex flex-col items-center mx-auto text-center'>
           <h1 className='mt-12 section_header'>FEATURED PROJECTS</h1>
@@ -26,14 +29,17 @@ export default function Projects({ posts, allCategories }) {
             <div className='flex filter'>
               <span
                 data-filter='*'
-                className='p-2 uppercase active hover:text-gray-50'
+                className='px-1 py-2 text-sm uppercase md:text-base md:px-3 active hover:text-gray-50'
               >
                 All
               </span>
               {/* map thru allCategories and place the results in a list    */}
               {allCategories.map((navCategory, index) => {
                 return (
-                  <div className='px-1 py-2 md:px2 filter ' key={index}>
+                  <div
+                    className='px-1 py-2 text-sm md:text-base md:px-3 filter '
+                    key={index}
+                  >
                     <span
                       className='uppercase hover:text-gray-50'
                       data-filter={`.${navCategory.category}`}
@@ -48,12 +54,10 @@ export default function Projects({ posts, allCategories }) {
         </div>
 
         {/*  ========== Posts Content Wrapper =========*/}
-        <div className='max-w-[1920px] pt-4 flex flex-col md:flex-row flex-wrap justify-center w-full mx-auto gallery'>
+        <div className='max-w-[1920px] pb-2 pt-4 flex flex-col md:flex-row flex-wrap justify-center w-full mx-auto gallery'>
           {/* map thru posts and save the results in a list sorted by date */}
           {posts.map((post, index) => (
             <div className='' key={index}>
-              {/* {console.log('post.slug: ', post.slug)} */}
-              {/* {console.log('post.slug: ', `/projects/${post.slug}`)} */}
               <Link href={`projects/${post.slug}`} key={post.id}>
                 {/* ======= Item ======== */}
                 <div
@@ -64,39 +68,37 @@ export default function Projects({ posts, allCategories }) {
                     .replace(/,/g, ' ')} `}
                 >
                   {/* Img and Text */}
-                  <div className='z-1'>
-                    <div
-                      className={`flex w-full h-full flex-col justify-center `}
-                    >
-                      <Image
-                        className='object-cover'
-                        width={999}
-                        height={444}
-                        src={post.cover}
-                        alt={post.alt}
-                      />
-                      {/* Hover  */}
-                      <div className='absolute z-10 w-full h-full opacity-100 cursor-pointer md:opacity-0 bg-black/70 md:hover:opacity-100 hover:transition hover:ease-in-out hover:duration-700'>
-                        {/* Hover Content */}
-                        <div className='flex flex-col justify-center w-full h-full px-8'>
-                          {/* Category */}
-                          <span
-                            data-filter={post.categories
-                              .toString()
-                              .replace(/,/g, ' ')}
-                          >
-                            {post.categories.toString().replace(/,/g, ' ')}
-                          </span>
-                          {/* Title */}
-                          <h1 className='mb-2 text-[1.25em] text-white uppercase'>
-                            {post.title}
-                          </h1>
-                          {/* Description */}
-                          <p className='text-gray-400 text-[1em] pb-6 uppercase'>
-                            {post.description}
-                            {/* {console.log('post.slug: ', post.slug)} */}
-                          </p>
-                        </div>
+                  <div className='flex flex-col justify-center w-full h-full z-1'>
+                    <Image
+                      className='object-cover'
+                      width={999}
+                      height={444}
+                      src={post.cover}
+                      alt={post.alt}
+                    />
+                    {/* Hover  */}
+
+                    <div className='absolute z-10 w-full h-full opacity-100 cursor-pointer md:opacity-0 bg-black/70 md:hover:opacity-100 hover:transition hover:ease-in-out hover:duration-1000'>
+                      {/* tailwindcss move div on Hover 20px to right  */}
+
+                      {/* Hover Content */}
+                      <div className='flex flex-col justify-center w-full h-full px-8 hover:duration-1000 hover:translate-x-4'>
+                        {/* Category */}
+                        <span
+                          data-filter={post.categories
+                            .toString()
+                            .replace(/,/g, ' ')}
+                        >
+                          {post.categories.toString().replace(/,/g, ' ')}
+                        </span>
+                        {/* Title */}
+                        <h1 className='mb-2 text-[1em] xs:text-[1.25em] text-white uppercase'>
+                          {post.title}
+                        </h1>
+                        {/* Description */}
+                        <p className='text-gray-400 text-[0.8em] xs:text-[1em] pb-6 uppercase'>
+                          {post.description}
+                        </p>
                       </div>
                     </div>
                   </div>

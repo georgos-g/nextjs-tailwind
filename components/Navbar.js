@@ -33,15 +33,14 @@ const Links = [
 ];
 //
 const Navbar = () => {
-  // const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
   const [isScroll, setIsScroll] = useState(false);
 
-  // if scroll position is below 100px set state for isScroll to false
+  // if scroll position is below 100px or screensize is less than 768px set setIsOpen to true
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 100 || window.innerWidth < 768) {
         setIsScroll(true);
       } else {
         setIsScroll(false);
@@ -57,9 +56,9 @@ const Navbar = () => {
         // Navbar with fixed position and background color
         className={`${
           isScroll
-            ? 'bg-bg_top_bottom text-gray-800 duration-700'
+            ? 'bg-nav_header_footer text-gray-800  duration-700'
             : 'bg-transparent text-gray-600'
-        } fixed top-0 left-0 right-0 z-20`}
+        }  fixed top-0 left-0 right-0 z-20 `}
       >
         <div className='px-2 mx-auto sm:px-6 lg:px-8'>
           <div className='relative flex items-center justify-between h-16'>
@@ -106,11 +105,13 @@ const Navbar = () => {
                 </div>
                 {/* Nav Links Desktop */}
                 {/* Responsive md:block */}
-                <div className='absolute right-0 hidden md:block sm:ml-6'>
+                <div className='absolute right-0 hidden ml-3 md:block md:ml-6'>
                   <div className='flex pt-1 space-x-1 md:space-x-4 lg:space-x-6'>
                     {Links.map((link) => {
                       return (
                         <Link
+                          // if isScroll is true change activeClass to activeGray
+                          activeClass={`${isScroll ? 'activeGray' : 'active'}`}
                           key={link.id}
                           smooth
                           spy
@@ -118,7 +119,7 @@ const Navbar = () => {
                           offset={-63}
                           to={link.url}
                         >
-                          <div className='px-3 hover:text-white text-[1em] font-openSansLight'>
+                          <div className='px-1 md:px-2 lg:px-3 text-[1em] font-openSansLight'>
                             {link.name}
                           </div>
                         </Link>
@@ -131,30 +132,37 @@ const Navbar = () => {
           </div>
 
           {/* Mobile menu, show/hide based on menu state  */}
-          <div className={`${isOpen ? '' : 'hidden'} sm:hidden pb-4`}>
-            <div className='px-3 pt-1 pb-1 space-y-1 '></div>
-            {Links.map((link) => {
-              return (
-                <Link
-                  key={link.id}
-                  activeClass='active'
-                  smooth
-                  duration={600}
-                  offset={-63}
-                  spy
-                  to={link.url}
-                  className='cursor-pointer'
-                >
-                  <div
-                    // toggle if cursor is out of menu
-                    onClick={toggle}
-                    className='block px-3 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white rounded-0 font-openSansLight'
+          <div className={`${isOpen ? '' : 'hidden'} md:hidden pb-4`}>
+            <div
+              className='px-0 pt-1 pb-1 space-y-1 '
+              onMouseLeave={toggle}
+              // onClickOutside={toggle}
+              // onScroll={toggle}
+            >
+              {Links.map((link) => {
+                return (
+                  <Link
+                    key={link.id}
+                    activeClass='active'
+                    smooth
+                    duration={600}
+                    offset={-63}
+                    spy
+                    to={link.url}
+                    className='cursor-pointer'
                   >
-                    {link.name}
-                  </div>
-                </Link>
-              );
-            })}
+                    <div className='mb-1 bg-gray-300'>
+                      <div
+                        onClick={toggle}
+                        className='block px-3 py-2 text-sm text-gray-800 hover:bg-gray-700 hover:text-white rounded-0 font-openSansLight'
+                      >
+                        {link.name}
+                      </div>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
           </div>
         </div>
       </nav>

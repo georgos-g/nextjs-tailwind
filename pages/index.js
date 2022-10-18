@@ -15,7 +15,6 @@ export default function Home({ posts, allCategories }) {
       {/* add a responsive fullscreen bg-img to section */}
 
       <Navbar />
-
       <HomeSection />
       <Services />
       {/* Projects Page with posts & allCategories props  */}

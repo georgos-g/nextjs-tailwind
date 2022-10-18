@@ -7,7 +7,7 @@ export default function SayHelloButton() {
   return (
     <>
       <motion.div
-        className='z-10 pt-8'
+        className='z-10 pt-40 md:pt-8'
         initial={{
           opacity: 0,
           y: 80,
@@ -23,7 +23,7 @@ export default function SayHelloButton() {
       >
         <div className='w-[180px] '>
           <Link to='contact' spy smooth duration={500} key='32'>
-            <div className='flex tracking-[2px] py-[8px] px-6 rounded-md  text-[16px] bg-gray-800 text-slate-300 hover:bg-orange-500  font-openSansBold  mt-[3px] '>
+            <div className='flex tracking-[2px] py-[8px] px-6 rounded-md  text-[16px] bg-gray-800 text-slate-300 hover:bg-orange-500  font-openSansBold mt-[3px]'>
               SAY HELLO
               <span className='pl-2 '>
                 <MailIcon />
