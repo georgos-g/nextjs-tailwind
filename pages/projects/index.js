@@ -11,7 +11,7 @@ export default function Projects({ posts, allCategories }) {
   }, []);
   return (
     <>
-      <div
+      <section
         id='projects'
         className='h-auto pt-0 mx-auto bg-gray-200 md:h-screen '
       >
@@ -104,7 +104,7 @@ export default function Projects({ posts, allCategories }) {
             </div>
           ))}
         </div>
-      </div>
+      </section>
     </>
   );
 }
