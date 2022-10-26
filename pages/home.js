@@ -9,7 +9,7 @@ export default function HomeSection() {
   return (
     <>
       <section id='home'>
-        <div className='w-full h-auto sm:h-full bg-gradient-to-tl from-yellow-700 to-gray-900'>
+        <div className='w-full h-auto sm:h-full bg-gradient-to-tl from-yellow-800 to-gray-900'>
           <Image
             width={1920}
             height={1080}
