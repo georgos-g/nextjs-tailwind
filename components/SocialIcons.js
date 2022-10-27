@@ -2,12 +2,11 @@ import React from 'react';
 import { SocialIcon } from 'react-social-icons';
 import MoveOnHover from './MoveOnHover';
 
-export default function Footer() {
+export default function SocialIcons() {
   return (
-    <footer className='py-3 text-sm text-center bg-nav_header_footer font-montserratLight'>
-      {/* create a div fixed to bottom of page */}
-      <div className='flex justify-center '>
-        <MoveOnHover>
+    <div className='flex justify-between w-32 text-sm font-montserratThin'>
+      <MoveOnHover>
+        <div>
           <SocialIcon
             url='https://www.facebook.com/georgos.gakis'
             fgColor='#fff'
@@ -16,8 +15,10 @@ export default function Footer() {
             target={'_blank'}
             className='social_icons'
           />
-        </MoveOnHover>
-        <MoveOnHover>
+        </div>
+      </MoveOnHover>
+      <MoveOnHover>
+        <div>
           <SocialIcon
             url='https://www.linkedin.com/in/georgos-gakis/'
             fgColor='#fff'
@@ -26,8 +27,10 @@ export default function Footer() {
             target={'_blank'}
             className='social_icons'
           />
-        </MoveOnHover>
-        <MoveOnHover>
+        </div>
+      </MoveOnHover>
+      <MoveOnHover>
+        <div>
           <SocialIcon
             url='https://github.com/georgos-g'
             fgColor='#fff'
@@ -36,11 +39,8 @@ export default function Footer() {
             target={'_blank'}
             className='social_icons'
           />
-        </MoveOnHover>
-      </div>
-      <p className='mt-1 mb-3'>
-        &copy; {new Date().getFullYear()} GEORGOS GAKIS | MADE BY MYSELF
-      </p>
-    </footer>
+        </div>
+      </MoveOnHover>
+    </div>
   );
 }

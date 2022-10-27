@@ -134,12 +134,44 @@
     letter-spacing: 3px;
     text-transform: uppercase;
   }
+
+  .txt_header {
+    font-family: 'Montserrat Middle';
+    font-size: 1.1em;
+    color: #000;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .txt_sub_header {
+    font-family: 'Montserrat Light';
+    font-size: 0.8em;
+    /* color: #000; */
+    color: rgb(50, 50, 50);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
   .project_sub_title {
     font-family: 'Montserrat Light';
     font-size: 1.2em;
     color: #000;
     letter-spacing: 1px;
     text-transform: uppercase;
+  }
+
+  .social_icons {
+    background-color: rgb(88, 88, 88);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 50%;
+  }
+
+  .imprint_headers {
+    font-family: 'Open Sans 400';
+    padding-top: 40px;
+    font-size: 1.1em;
+    color: #000;
+    letter-spacing: 2px;
+    /* text-transform: uppercase; */
   }
 
   /* ====================== [ Cursor Style ] ====================== */

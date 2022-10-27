@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import Image from 'next/future/image';
 import initIsotope from '../../common/initIsotope';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 export default function Projects({ posts, allCategories }) {
   useEffect(() => {
     setTimeout(() => {
@@ -11,13 +10,10 @@ export default function Projects({ posts, allCategories }) {
   }, []);
   return (
     <>
-      <section
-        id='projects'
-        className='h-auto pt-0 mx-auto bg-gray-200 md:h-screen '
-      >
+      <section id='projects' className='pt-0 mx-auto bg-gray-200 2xl:h-screen'>
         {/* ========= Text Header ========== */}
         <div className='flex flex-col items-center mx-auto text-center'>
-          <h1 className='mt-12 mb-10 section_header'>FEATURED PROJECTS</h1>
+          <h1 className='mt-16 mb-10 section_header'>FEATURED PROJECTS</h1>
 
           <h2 className='mb-10 section_sub_header'>SOME EXAMPLES OF MY WORK</h2>
         </div>
