@@ -11,7 +11,7 @@ export default function Contact() {
     <section id='contact' className=''>
       <div className='flex flex-col justify-center text-center bg-[#777] py-52'>
         <div className=''>
-          <p className='text-5xl tracking-wide font-montserratThin text-slate-50 '>
+          <p className='text-5xl leading-snug tracking-wide font-montserratThin text-slate-50 '>
             SEE WHAT I CAN DO FOR YOU
           </p>
           {/* center button  */}
@@ -28,7 +28,7 @@ export default function Contact() {
       <div className='bg-slate-50 '>
         <div className='container flex flex-wrap justify-center pt-8 mx-auto '>
           {/* phone */}
-          <div className='flex justify-start w-[340px] mx-2 py-4 text-gray-500'>
+          <div className='flex justify-start w-[300px] md:mx-6 py-4 text-gray-500'>
             <div className='flex text-left'>
               <AddressPhoneIcon />
               <div className='pl-4'>
@@ -38,7 +38,7 @@ export default function Contact() {
             </div>
           </div>
           {/* address */}
-          <div className='flex justify-start w-[340px] mx-2 py-4 text-gray-500'>
+          <div className='flex justify-start w-[300px] md:mx-6 py-4 text-gray-500'>
             <div className='flex text-left'>
               <AddressMapIcon />
               <div className='pl-4'>
@@ -48,7 +48,7 @@ export default function Contact() {
             </div>
           </div>
           {/* email */}
-          <div className='flex justify-start w-[340px] mx-2 py-4 text-gray-500'>
+          <div className='flex justify-start w-[300px] md:mx-6 py-4 text-gray-500'>
             <div className='flex text-left'>
               <AddressMailIcon />
               <div className='pl-4'>
@@ -61,7 +61,7 @@ export default function Contact() {
           </div>
         </div>
         {/* imprint */}
-        <div className='p-20 '>
+        <div className='py-20 '>
           <AccordionImprint content={<Imprint />} />
         </div>
       </div>

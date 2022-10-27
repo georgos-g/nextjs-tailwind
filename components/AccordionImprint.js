@@ -10,8 +10,7 @@ const AccordionImprint = ({ question, content }) => {
         <div className='flex items-center justify-center'>
           <motion.div
             key='question'
-            //   className='relative z-20 px-1 py-2 bg-blue-200 border-l-2 border-yellow-500 shadow-sm cursor-pointer rounded-tr-md rounded-br-md font-open'
-            className=' text-lg rounded-none btn w-[340px]'
+            className=' text-lg rounded-none btn w-[300px]'
             onClick={() => setIsOpen(!isOpen)}
           >
             <motion.div className='ml-1 font-bold text-slate-50'>

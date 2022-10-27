@@ -2,7 +2,7 @@ export default function Imprint() {
   return (
     <>
       <div
-        className='container flex flex-col justify-center p-4 mx-auto mt-6 md:p-8 bg-slate-50'
+        className='container flex flex-col justify-center p-2 mx-auto mt-6 md:p-8 bg-slate-50'
         id='imprint'
       >
         <div className=''>
