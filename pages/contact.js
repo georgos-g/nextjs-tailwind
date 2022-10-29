@@ -12,8 +12,9 @@ export default function Contact() {
       <div className='flex flex-col justify-center text-center bg-[#777] py-52'>
         <div className=''>
           <p className='text-5xl leading-snug tracking-wide font-montserratThin text-slate-50 '>
-            SEE WHAT I CAN DO FOR YOU
+            FIND OUT WHAT I CAN DO FOR YOU
           </p>
+
           {/* center button  */}
           <div className='flex justify-center pt-20'>
             <button className='text-lg rounded-none btn btn-wide '>
@@ -24,9 +25,10 @@ export default function Contact() {
           </div>
         </div>
       </div>
+
       {/* address wrapper */}
-      <div className='bg-slate-50 '>
-        <div className='container flex flex-wrap justify-center pt-8 mx-auto '>
+      <div className='bg-slate-100 '>
+        <div className='container flex flex-wrap justify-center mx-auto pt-14 '>
           {/* phone */}
           <div className='flex justify-start w-[300px] md:mx-6 py-4 text-gray-500'>
             <div className='flex text-left'>

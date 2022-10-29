@@ -25,7 +25,7 @@ export default function ProgressBar({ endProgresBarValue, progresBarTitle }) {
   return (
     <>
       <div ref={ref}>
-        <div className='p-4 bg-gray-200 shadow-xl '>
+        <div className='p-4 shadow-xl bg-slate-100 '>
           <div className='flex justify-between '>
             <div className='text-base tracking-wide card-title'>
               {progresBarTitle}

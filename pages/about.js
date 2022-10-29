@@ -4,7 +4,10 @@ import SocialIcons from '../components/SocialIcons';
 
 export default function About() {
   return (
-    <section id='about' className='bg-gray-300 '>
+    <section
+      id='about'
+      className='flex bg-gray-400/60 xl:h-screen xl:items-center'
+    >
       {/* Card Wrap  */}
       <div className='container flex flex-wrap-reverse justify-center mx-auto sm:flex-wrap sm:py-28 '>
         {/* Photo and description*/}
@@ -24,7 +27,7 @@ export default function About() {
           </div>
         </div>
         {/* Text and Icons Wrapper */}
-        <div className='flex flex-col justify-between xs:max-w-[460px] md:shadow-xl p-6 pt-10 xs:p-10 xs:pb-4 bg-slate-50 xl:max-w-[600px]'>
+        <div className='flex flex-col justify-between xs:max-w-[460px] md:shadow-xl p-6 pt-10 xs:p-10 xs:pb-4 bg-slate-100 xl:max-w-[600px]'>
           {/* text */}
           <div>
             <h2 className='pb-6 project_title'>ABOUT ME</h2>
@@ -34,14 +37,21 @@ export default function About() {
               numerous projects as media, web and music producer.
               <br />
               <br />
-              My passion: combining technology and art performances. I am
-              looking forward to working as a junior in a pleasant working
-              environment, realising projects, learning new technologies and
-              developing my coding skills.
+              My passion: combining technology and art performances.
+              <br />
+              I'm a very positive person, problem solver with high attention to
+              detail.
+              <br />
+              Fan of dancing, bicycling, TV series and mediterranean food.
+              <br />A family person and father of two special girls.
+              <br />
+              <br />I am looking forward to working as a developer in a pleasant
+              working environment, realizing projects, learning new technologies
+              and developing my coding skills.
             </p>
           </div>
           {/* social icons */}
-          <div className='grid content-end '>
+          <div className='grid content-end w-20'>
             <MoveUp>
               <SocialIcons />
             </MoveUp>

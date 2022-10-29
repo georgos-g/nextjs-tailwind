@@ -52,7 +52,7 @@ const NavbarProject = () => {
               <button
                 onClick={toggle}
                 type='button'
-                className='inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-0 focus:ring-inset focus:ring-white'
+                className='inline-flex items-center justify-center p-2 text-gray-500 rounded-[3px] hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-0 focus:ring-inset focus:ring-white'
                 aria-controls='mobile-menu'
                 aria-expanded='false'
               >
@@ -94,7 +94,6 @@ const NavbarProject = () => {
                 <div className='absolute right-0 hidden ml-3 md:block md:ml-6'>
                   <div className='flex pt-2 space-x-1 md:space-x-3 lg:space-x-6'>
                     {Links.map((link) => {
-                      // console.log('link.url: ', link.url);
                       return (
                         <Link key={link.id} href={`/${link.url}`}>
                           <a

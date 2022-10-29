@@ -16,14 +16,14 @@ const Links = [
     url: 'services',
   },
   {
-    id: 3,
-    name: 'PROJECTS',
-    url: 'projects',
-  },
-  {
     id: 4,
     name: 'ABOUT',
     url: 'about',
+  },
+  {
+    id: 3,
+    name: 'PROJECTS',
+    url: 'projects',
   },
   {
     id: 5,
@@ -56,9 +56,9 @@ const Navbar = () => {
         // Navbar with fixed position and background color
         className={`${
           isScroll
-            ? 'bg-nav_header_footer text-gray-800  duration-700'
+            ? 'bg-nav_header_footer text-gray-800  duration-700 shadow-lg'
             : 'bg-transparent text-gray-600'
-        }  fixed top-0 left-0 right-0 z-20 `}
+        }  fixed top-0 left-0 right-0 z-20`}
       >
         <div className='px-2 mx-auto sm:px-6 lg:px-8'>
           <div className='relative flex items-center justify-between h-16'>
@@ -68,7 +68,7 @@ const Navbar = () => {
               <button
                 onClick={toggle}
                 type='button'
-                className='inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-0 focus:ring-inset focus:ring-white'
+                className='inline-flex items-center justify-center p-2 text-gray-500 rounded-[3px] hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-0 focus:ring-inset focus:ring-white'
                 aria-controls='mobile-menu'
                 aria-expanded='false'
               >

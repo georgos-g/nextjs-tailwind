@@ -34,7 +34,7 @@ module.exports = {
         montserratBlack: ['Montserrat Black', 'sans-serif'],
       },
       colors: {
-        nav_header_footer: ' #FFFFF0',
+        nav_header_footer: '#DCDCDC',
       },
       // transition-opacity
       transitionProperty: {

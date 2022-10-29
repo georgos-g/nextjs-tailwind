@@ -4,7 +4,7 @@ import MoveOnHover from './MoveOnHover';
 
 export default function SocialIcons() {
   return (
-    <div className='flex justify-between w-32 text-sm font-montserratThin'>
+    <div className='flex justify-between text-sm font-montserratThin'>
       <MoveOnHover>
         <div>
           <SocialIcon

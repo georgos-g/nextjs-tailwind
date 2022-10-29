@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Image from 'next/future/image';
 import initIsotope from '../../common/initIsotope';
 import Link from 'next/link';
+
 export default function Projects({ posts, allCategories }) {
   useEffect(() => {
     setTimeout(() => {
@@ -34,6 +35,7 @@ export default function Projects({ posts, allCategories }) {
                 return (
                   <>
                     <span
+                      key={index}
                       className='px-1 py-1 text-sm text-gray-800 uppercase hover:text-gray-400 md:text-base md:px-3'
                       data-filter={`.${navCategory.category}`}
                     >
@@ -72,18 +74,20 @@ export default function Projects({ posts, allCategories }) {
                     {/* Hover  */}
 
                     <div className='absolute z-10 w-full h-full opacity-100 cursor-pointer md:opacity-0 bg-black/70 md:hover:opacity-100 hover:transition hover:ease-in-out hover:duration-1000'>
-                      {/* tailwindcss move div on Hover 20px to right  */}
-
                       {/* Hover Content */}
+
+                      {/* tailwindcss move div on Hover 20px to right  */}
                       <div className='flex flex-col justify-center w-full h-full px-8 hover:duration-1000 hover:translate-x-4'>
                         {/* Category */}
-                        <span
+
+                        {/* <span
                           data-filter={post.categories
                             .toString()
                             .replace(/,/g, ' ')}
                         >
                           {post.categories.toString().replace(/,/g, ' ')}
-                        </span>
+                        </span> */}
+
                         {/* Title */}
                         <h1 className='mb-2 text-[1em] xs:text-[1.25em] text-white uppercase'>
                           {post.title}

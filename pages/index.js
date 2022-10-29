@@ -17,13 +17,14 @@ export default function Home({ posts, allCategories }) {
       <Navbar />
       <HomeSection />
       <Services />
+      <About />
       {/* Projects Page with posts & allCategories props  */}
       <Projects posts={posts} allCategories={allCategories} />
-      <About />
       <Contact />
     </>
   );
 }
+
 export async function getStaticProps() {
   const client = new ApolloClient({
     uri: process.env.STRAPI_GRAPHQL_ENDPOINT,
@@ -35,7 +36,6 @@ export async function getStaticProps() {
   });
 
   //* map thru posts and save the results in a list sorted by date */
-
   const posts = data.posts.data.map((post) => {
     return {
       id: post.id,
@@ -46,12 +46,24 @@ export async function getStaticProps() {
       slug: post.attributes.Slug,
       cover:
         process.env.NEXT_PUBLIC_API_ENDPOINT +
-        post.attributes.Cover.data.attributes.url,
-      alt: post.attributes.Cover.data.attributes.alternativeText,
+        post?.attributes.Cover.data.attributes.url,
+
+      // show all Media img in the post
+      media: post?.attributes.Media.data.map((media) => {
+        return {
+          id: media.id,
+          url: process.env.NEXT_PUBLIC_API_ENDPOINT + media.attributes.url,
+          alt: media.attributes.alternativeText,
+        };
+      }),
+
+      alt: post?.attributes.Cover.data.attributes.alternativeText,
+
       // Seo
       seo: {
         title: post.attributes.PostSeo.SeoTitle,
         description: post.attributes.PostSeo.SeoDescription,
+        id: post.attributes.PostSeo.id,
       },
 
       // get all categories from each post
@@ -60,7 +72,6 @@ export async function getStaticProps() {
       }),
     };
   });
-
   // fetch all categories
   const allCategories = data.categories.data.map((category) => {
     return {

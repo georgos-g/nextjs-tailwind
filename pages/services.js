@@ -13,20 +13,20 @@ export function Services() {
       {/* section wrapper */}
       <section
         id='services'
-        className='h-auto pt-0 bg-gray-300 lg1552:h-screen '
+        className='h-auto pt-0 bg-gray-300 [1552px]:h-screen '
       >
-        {/* Container */}
+        {/* Wrapper  Header & Cards */}
         <div className='container mx-auto'>
           {/* ========= Text Header ========== */}
           <div className='flex flex-col items-center mx-auto text-center'>
             <h1 className='mt-16 mb-3 section_header'>WHAT I DO</h1>
-            <h2 className='mb-16 section_sub_header'>SOME OF MY SKILLS</h2>
+            <h2 className='mb-12 section_sub_header'>SOME OF MY SKILLS</h2>
           </div>
           {/* ========= Cards ========== */}
-          <div className='flex flex-wrap justify-center pb-12 '>
+          <div className='flex flex-wrap pb-6 justify-evenly '>
             <MoveUp delay={0}>
               <div className='flex p-4'>
-                <div className='bg-gray-200 rounded-none shadow-xl card  h-auto sm:h-72 w-33 w-[340px] sm:w-[480px]'>
+                <div className='bg-slate-100 rounded-none shadow-xl card  h-auto sm:h-72 w-33 w-[340px] sm:w-[480px]'>
                   <div className='card-body'>
                     <div className='pb-4'>
                       <ProgrammingIcon />
@@ -44,7 +44,7 @@ export function Services() {
 
             <MoveUp delay={0.5}>
               <div className='flex p-4'>
-                <div className='bg-gray-200 rounded-none shadow-xl card h-auto sm:h-72  w-[340px] sm:w-[480px]'>
+                <div className='bg-slate-100 rounded-none shadow-xl card h-auto sm:h-72  w-[340px] sm:w-[480px]'>
                   <div className='card-body'>
                     <div className='pb-4'>
                       <FrameworksIcon />
@@ -61,7 +61,7 @@ export function Services() {
 
             <MoveUp delay={1}>
               <div className='flex p-4'>
-                <div className='bg-gray-200 rounded-none shadow-xl card h-auto sm:h-72 w-33 w-[340px] sm:w-[480px]'>
+                <div className='bg-slate-100 rounded-none shadow-xl card h-auto sm:h-72 w-33 w-[340px] sm:w-[480px]'>
                   <div className='card-body'>
                     <div className='pb-4'>
                       <ContentCreationIcon />
@@ -80,12 +80,33 @@ export function Services() {
             </MoveUp>
           </div>
         </div>
-        <div>
-          {/* ========= PROGRESSBARS ========== */}
 
-          {/*ProgressBar 1 */}
-          <div className='container flex flex-wrap pb-20 mx-auto mt-10 justify-evenly'>
-            <div className='w-full md:w-1/2'>
+        {/* ============ Second Part Services ===============*/}
+        <div className='container flex flex-wrap p-1 pb-20 mx-auto '>
+          {/* left text card */}
+          <div className='px-2 py-4 lg:w-1/2 md:px-4 '>
+            <div className='flex flex-col p-4 shadow-xl md:h-full sm:p-10 bg-slate-100'>
+              {/* text */}
+              <div>
+                <h2 className='pb-6 project_title'>my goals</h2>
+                {/* <p className='mb-4 text-base uppercase sm:text-xl font-openSansLight '> */}
+                <p className='mb-4 uppercase section_sub_header sm:text-lg '>
+                  <br /> I have a serious passion for creating intuitive,
+                  dynamic user experiences. <br />
+                  <br />
+                  Interested in the entire frontend spectrum and working on
+                  ambitious projects.
+                  <br />
+                  <br />
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* ========= PROGRESS BARS ========== */}
+          <div className='w-full lg:w-1/2 '>
+            {/*ProgressBar 1 */}
+            <div className='w-full '>
               <div className='px-2 py-4 md:px-4'>
                 <MoveUp>
                   <ProgressBar
@@ -96,7 +117,7 @@ export function Services() {
               </div>
             </div>
             {/* ProgressBar 2 */}
-            <div className='w-full md:w-1/2'>
+            <div className='w-full '>
               <div className='px-2 py-4 md:px-4'>
                 <MoveUp>
                   <ProgressBar
@@ -107,7 +128,7 @@ export function Services() {
               </div>
             </div>
             {/* ProgressBar 3 */}
-            <div className='w-full md:w-1/2'>
+            <div className='w-full '>
               <div className='px-2 py-4 md:px-4'>
                 <MoveUp>
                   <ProgressBar
@@ -118,7 +139,7 @@ export function Services() {
               </div>
             </div>
             {/* ProgressBar 4 */}
-            <div className='w-full md:w-1/2'>
+            <div className='w-full '>
               <div className='px-2 py-4 md:px-4'>
                 <MoveUp>
                   <ProgressBar
