@@ -23,7 +23,7 @@ export default function AnimatedText() {
     <>
       <div className='z-10'>
         <h2 className='drop-shadow-lg shadow-slate-100 font-openSansLight text-left  text-gray-400 text-[1em] md:text-[1.4em] tracking-[3px]'>
-          <MoveAnimatedText delay={0}>Hello, I'm</MoveAnimatedText>
+          <MoveAnimatedText delay={0}>Hello, I&apos;m</MoveAnimatedText>
         </h2>
         <h1 className='font-montserratBold text-[2em] md:text-[3em] tracking-[9px] text-gray-100'>
           <MoveAnimatedText delay={1}>GEORGOS</MoveAnimatedText>

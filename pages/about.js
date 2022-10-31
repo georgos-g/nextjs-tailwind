@@ -39,8 +39,8 @@ export default function About() {
               <br />
               My passion: combining technology and art performances.
               <br />
-              I'm a very positive person, problem solver with high attention to
-              detail.
+              I&apos;m a very positive person, problem solver with high
+              attention to detail.
               <br />
               Fan of dancing, bicycling, TV series and mediterranean food.
               <br />A family person and father of two special girls.
