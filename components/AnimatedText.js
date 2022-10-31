@@ -6,10 +6,10 @@ export default function AnimatedText() {
   const [titleTypewriter, count] = useTypewriter({
     words: [
       '(JUNIOR) FRONTEND DEVELOPER',
-      // 'MEDIA DESIGNER',
-      // 'WEB DESIGNER',
-      'PALOMAS BABAKA',
-      'AMALIAS BABAKA',
+      'WEB DESIGNER',
+      'MEDIA DESIGNER',
+      // 'PALOMAS BABAKA',
+      // 'AMALIAS BABAKA',
       // 'HALLO FREUNDE',
       // 'WILLKOMMEN',
     ],
