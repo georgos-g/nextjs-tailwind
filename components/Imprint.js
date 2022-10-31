@@ -119,7 +119,7 @@ export default function Imprint() {
                 Profiling means any form of automated processing of personal
                 data consisting of the use of personal data to evaluate certain
                 personal aspects relating to a natural person, in particular to
-                analyse or predict aspects concerning that natural person's
+                analyse or predict aspects concerning that natural person&apos;s
                 performance at work, economic situation, health, personal
                 preferences, interests, reliability, behaviour, location or
                 movements.
@@ -187,10 +187,10 @@ export default function Imprint() {
               <p className='imprint_headers'>k) Consent</p>
               <p>
                 Consent of the data subject is any freely given, specific,
-                informed and unambiguous indication of the data subject's wishes
-                by which he or she, by a statement or by a clear affirmative
-                action, signifies agreement to the processing of personal data
-                relating to him or her.
+                informed and unambiguous indication of the data subject&apos;s
+                wishes by which he or she, by a statement or by a clear
+                affirmative action, signifies agreement to the processing of
+                personal data relating to him or her.
               </p>
             </li>
           </ul>
@@ -242,10 +242,11 @@ export default function Imprint() {
             recognition is to make it easier for users to utilize our website.
             The website user that uses cookies, e.g. does not have to enter
             access data each time the website is accessed, because this is taken
-            over by the website, and the cookie is thus stored on the user's
-            computer system. Another example is the cookie of a shopping cart in
-            an online shop. The online store remembers the articles that a
-            customer has placed in the virtual shopping cart via a cookie.
+            over by the website, and the cookie is thus stored on the
+            user&apos;s computer system. Another example is the cookie of a
+            shopping cart in an online shop. The online store remembers the
+            articles that a customer has placed in the virtual shopping cart via
+            a cookie.
           </p>
           <p>
             The data subject may, at any time, prevent the setting of cookies
@@ -294,22 +295,22 @@ export default function Imprint() {
           <p className='imprint_headers'>5. Subscription to our newsletters</p>
           <p>
             On the website of the www.georgos-gakis.com, users are given the
-            opportunity to subscribe to our enterprise's newsletter. The input
-            mask used for this purpose determines what personal data are
+            opportunity to subscribe to our enterprise&apos;s newsletter. The
+            input mask used for this purpose determines what personal data are
             transmitted, as well as when the newsletter is ordered from the
             controller.
           </p>
           <p>
             The www.georgos-gakis.com informs its customers and business
             partners regularly by means of a newsletter about enterprise offers.
-            The enterprise's newsletter may only be received by the data subject
-            if (1) the data subject has a valid e-mail address and (2) the data
-            subject registers for the newsletter shipping. A confirmation e-mail
-            will be sent to the e-mail address registered by a data subject for
-            the first time for newsletter shipping, for legal reasons, in the
-            double opt-in procedure. This confirmation e-mail is used to prove
-            whether the owner of the e-mail address as the data subject is
-            authorized to receive the newsletter.
+            The enterprise&apos;s newsletter may only be received by the data
+            subject if (1) the data subject has a valid e-mail address and (2)
+            the data subject registers for the newsletter shipping. A
+            confirmation e-mail will be sent to the e-mail address registered by
+            a data subject for the first time for newsletter shipping, for legal
+            reasons, in the double opt-in procedure. This confirmation e-mail is
+            used to prove whether the owner of the e-mail address as the data
+            subject is authorized to receive the newsletter.
           </p>
           <p>
             During the registration for the newsletter, we also store the IP
@@ -394,14 +395,14 @@ export default function Imprint() {
             If a data subject leaves a comment on the blog published on this
             website, the comments made by the data subject are also stored and
             published, as well as information on the date of the commentary and
-            on the user's (pseudonym) chosen by the data subject. In addition,
-            the IP address assigned by the Internet service provider (ISP) to
-            the data subject is also logged. This storage of the IP address
-            takes place for security reasons, and in case the data subject
-            violates the rights of third parties, or posts illegal content
-            through a given comment. The storage of these personal data is,
-            therefore, in the own interest of the data controller, so that he
-            can exculpate in the event of an infringement. This collected
+            on the user&apos;s (pseudonym) chosen by the data subject. In
+            addition, the IP address assigned by the Internet service provider
+            (ISP) to the data subject is also logged. This storage of the IP
+            address takes place for security reasons, and in case the data
+            subject violates the rights of third parties, or posts illegal
+            content through a given comment. The storage of these personal data
+            is, therefore, in the own interest of the data controller, so that
+            he can exculpate in the event of an infringement. This collected
             personal data will not be passed to third parties, unless such a
             transfer is required by law or serves the aim of the defense of the
             data controller.
@@ -720,19 +721,19 @@ export default function Imprint() {
                 between the data subject and a data controller, or (2) is not
                 authorised by Union or Member State law to which the controller
                 is subject and which also lays down suitable measures to
-                safeguard the data subject's rights and freedoms and legitimate
-                interests, or (3) is not based on the data subject's explicit
-                consent.
+                safeguard the data subject&apos;s rights and freedoms and
+                legitimate interests, or (3) is not based on the data
+                subject&apos;s explicit consent.
               </p>
               <p>
                 If the decision (1) is necessary for entering into, or the
                 performance of, a contract between the data subject and a data
-                controller, or (2) it is based on the data subject's explicit
-                consent, the www.georgos-gakis.com shall implement suitable
-                measures to safeguard the data subject's rights and freedoms and
-                legitimate interests, at least the right to obtain human
-                intervention on the part of the controller, to express his or
-                her point of view and contest the decision.
+                controller, or (2) it is based on the data subject&apos;s
+                explicit consent, the www.georgos-gakis.com shall implement
+                suitable measures to safeguard the data subject&apos;s rights
+                and freedoms and legitimate interests, at least the right to
+                obtain human intervention on the part of the controller, to
+                express his or her point of view and contest the decision.
               </p>
               <p>
                 If the data subject wishes to exercise the rights concerning
@@ -820,10 +821,10 @@ export default function Imprint() {
             data subject. This information is collected through the Facebook
             component and associated with the respective Facebook account of the
             data subject. If the data subject clicks on one of the Facebook
-            buttons integrated into our website, e.g. the "Like" button, or if
-            the data subject submits a comment, then Facebook matches this
-            information with the personal Facebook user account of the data
-            subject and stores the personal data.
+            buttons integrated into our website, e.g. the &quot;Like&quot;
+            button, or if the data subject submits a comment, then Facebook
+            matches this information with the personal Facebook user account of
+            the data subject and stores the personal data.
           </p>
           <p>
             Facebook always receives, through the Facebook component,
@@ -869,11 +870,11 @@ export default function Imprint() {
           </p>
           <p>
             For the web analytics through Google Analytics the controller uses
-            the application "_gat. _anonymizeIp". By means of this application
-            the IP address of the Internet connection of the data subject is
-            abridged by Google and anonymised when accessing our websites from a
-            Member State of the European Union or another Contracting State to
-            the Agreement on the European Economic Area.
+            the application &quot;_gat. _anonymizeIp&quot;. By means of this
+            application the IP address of the Internet connection of the data
+            subject is abridged by Google and anonymised when accessing our
+            websites from a Member State of the European Union or another
+            Contracting State to the Agreement on the European Economic Area.
           </p>
           <p>
             The purpose of the Google Analytics component is to analyze the
@@ -1035,11 +1036,11 @@ export default function Imprint() {
             advertiser to place ads in Google search engine results and the
             Google advertising network. Google AdWords allows an advertiser to
             pre-define specific keywords with the help of which an ad on
-            Google's search results only then displayed, when the user utilizes
-            the search engine to retrieve a keyword-relevant search result. In
-            the Google Advertising Network, the ads are distributed on relevant
-            web pages using an automatic algorithm, taking into account the
-            previously defined keywords.
+            Google&apos;s search results only then displayed, when the user
+            utilizes the search engine to retrieve a keyword-relevant search
+            result. In the Google Advertising Network, the ads are distributed
+            on relevant web pages using an automatic algorithm, taking into
+            account the previously defined keywords.
           </p>
           <p>
             The operating company of Google AdWords is Google Inc., 1600
@@ -1239,7 +1240,7 @@ export default function Imprint() {
             Pinterest enables the users of the social network to publish, inter
             alia, picture collections and individual pictures as well as
             descriptions on virtual pinboards (so-called pins), which can then
-            be shared by other user's (so-called re-pins) or commented on.
+            be shared by other user&apos;s (so-called re-pins) or commented on.
           </p>
           <p>
             The operating company of Pinterest is Pinterest Inc., 808 Brannan
@@ -1297,7 +1298,7 @@ export default function Imprint() {
             characters. These short messages are available for everyone,
             including those who are not logged on to Twitter. The tweets are
             also displayed to so-called followers of the respective user.
-            Followers are other Twitter users who follow a user's tweets.
+            Followers are other Twitter users who follow a user&apos;s tweets.
             Furthermore, Twitter allows you to address a wide audience via
             hashtags, links or retweets.
           </p>
@@ -1380,9 +1381,9 @@ export default function Imprint() {
             subject. This information is collected through the XING component
             and associated with the respective XING account of the data subject.
             If the data subject clicks on the XING button integrated on our
-            Internet site, e.g. the "Share"-button, then XING assigns this
-            information to the personal XING user account of the data subject
-            and stores the personal data.
+            Internet site, e.g. the &quot;Share&quot;-button, then XING assigns
+            this information to the personal XING user account of the data
+            subject and stores the personal data.
           </p>
           <p>
             XING receives information via the XING component that the data
@@ -1449,7 +1450,7 @@ export default function Imprint() {
             own YouTube account before a call-up to our website is made.
           </p>
           <p>
-            YouTube's data protection provisions, available at
+            YouTube&apos;s data protection provisions, available at
             https://www.google.com/intl/en/policies/privacy/, provide
             information about the collection, processing and use of personal
             data by YouTube and Google.
