@@ -14,10 +14,7 @@ config.autoAddCss = false;
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      {/* <Cursor /> */}
       <Layout>
-        {/* <Cursor /> */}
-
         <Component {...pageProps} />
       </Layout>
       <ScrollToTop />
@@ -29,10 +26,10 @@ function MyApp({ Component, pageProps }) {
     </>
   );
 }
-MyApp.getInitialProps = async (appContext) => {
-  const { pageProps } = await App.getInitialProps(appContext);
-  const { ctx } = appContext;
-  return { pageProps };
-};
+// MyApp.getInitialProps = async (appContext) => {
+//   const { pageProps } = await App.getInitialProps(appContext);
+//   const { ctx } = appContext;
+//   return { pageProps };
+// };
 
 export default MyApp;

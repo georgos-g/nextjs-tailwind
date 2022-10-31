@@ -75,12 +75,11 @@ export default function Project({ post }) {
             </div>
 
             {/* Image & Text */}
-            <div className='flex flex-wrap bg-slate-50'>
+            <div className='flex flex-wrap justify-center bg-slate-50'>
               {/* Image */}
 
               <div className='max-w-full lg:w-1/2'>
-                {/* <div className=''> */}
-                <div className='flex justify-center '>
+                <div className=''>
                   {/* if post has no media entries show Cover img */}
                   {post.attributes.Media.data.length === 0 ? (
                     <Image

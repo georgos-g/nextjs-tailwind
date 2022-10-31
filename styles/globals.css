@@ -174,6 +174,15 @@
     /* text-transform: uppercase; */
   }
 
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: gray !important;
+  }
+
+  /* .swiper_button_next {
+    color: red !important;
+  } */
+
   /* ====================== [ Cursor Style ] ====================== */
   .mouse-cursor {
     position: fixed;

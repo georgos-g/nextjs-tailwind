@@ -9,7 +9,7 @@ const Links = [
   {
     id: 1,
     name: 'HOME',
-    url: '/',
+    url: '',
   },
   {
     id: 2,
@@ -120,9 +120,9 @@ const NavbarProject = () => {
           {/* Mobile menu, show/hide based on menu state  */}
           <div className={`${isOpen ? '' : 'hidden'} md:hidden pb-4`}>
             <div className='px-3 pt-1 pb-1 space-y-1 '></div>
-            {Links.map((link) => {
+            {Links.map((link, index) => {
               return (
-                <Link href={`/${link.url}`} key={link.id}>
+                <Link href={`/${link.url}`} key={index}>
                   <div className='mb-1 bg-gray-300'>
                     <a
                       // toggle if cursor is out of menu

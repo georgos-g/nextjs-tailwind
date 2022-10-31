@@ -19,7 +19,7 @@ export default function Slider({ ...post }) {
         centeredSlides={true}
         autoplay={{
           delay: 3000,
-          disableOnInteraction: false,
+          disableOnInteraction: true,
         }}
         pagination={{
           clickable: true,

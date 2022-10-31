@@ -10,7 +10,7 @@ module.exports = {
     // Adding smaller breakpoint
     screens: {
       xs: '475px',
-      lg1552: '1552px',
+      // lg1552: '1552px',
 
       ...defaultTheme.screens,
     },

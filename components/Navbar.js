@@ -139,10 +139,10 @@ const Navbar = () => {
               // onClickOutside={toggle}
               // onScroll={toggle}
             >
-              {Links.map((link) => {
+              {Links.map((link, index) => {
                 return (
                   <Link
-                    key={link.id}
+                    key={index}
                     activeClass='active'
                     smooth
                     duration={600}
