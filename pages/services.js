@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+
 import {
   ContentCreationIcon,
   FrameworksIcon,
@@ -7,7 +8,7 @@ import {
 import MoveUp from '../components/MoveUp';
 import ProgressBar from '../components/ProgressBar';
 
-export function Services() {
+export default function Services() {
   return (
     <>
       {/* section wrapper */}
