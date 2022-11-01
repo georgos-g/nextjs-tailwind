@@ -62,7 +62,7 @@ export default function Project({ post }) {
       <div className='pt-[63px]'></div>
 
       {/* Project Wrapper */}
-      <div className='h-screen bg-slate-200'>
+      <div className='sm:h-screen bg-slate-200'>
         {/* Project Headers */}
         {/* <div className='container flex justify-center mx-auto py-14'> */}
         <div className='container justify-center mx-auto py-14'>
@@ -75,7 +75,7 @@ export default function Project({ post }) {
             </div>
 
             {/* Image & Text */}
-            <div className='flex flex-wrap justify-center bg-slate-50'>
+            <div className='flex flex-wrap justify-center h-full bg-slate-50'>
               {/* Image */}
 
               <div className='max-w-full lg:w-1/2'>
@@ -102,7 +102,6 @@ export default function Project({ post }) {
               </div>
               {/* Text */}
               <div className='px-4 py-6 sm:px-8 lg:w-1/2'>
-                {/* <div className='px-4 py-6 sm:px-8'> */}
                 <p>{post.attributes.Content}</p>
               </div>
             </div>

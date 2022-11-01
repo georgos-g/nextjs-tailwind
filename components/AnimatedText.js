@@ -25,7 +25,7 @@ export default function AnimatedText() {
         <h2 className='drop-shadow-lg shadow-slate-100 font-openSansLight text-left  text-gray-400 text-[1em] md:text-[1.4em] tracking-[3px]'>
           <MoveAnimatedText delay={0}>Hello, I&apos;m</MoveAnimatedText>
         </h2>
-        <h1 className='font-montserratBold text-[2em] md:text-[3em] tracking-[9px] text-gray-100'>
+        <h1 className='font-montserratBold text-[2em] md:text-[3em] tracking-[9px] text-gray-100 max-w-[300px]'>
           <MoveAnimatedText delay={1}>GEORGOS</MoveAnimatedText>
         </h1>
         <MoveAnimatedText delay={1.5}>

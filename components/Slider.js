@@ -14,6 +14,11 @@ export default function Slider({ ...post }) {
   return (
     <>
       <Swiper
+        // change swiper style to match the design
+        style={{
+          '--swiper-theme-color': '#fff',
+          '--swiper-navigation-size': '2rem',
+        }}
         spaceBetween={1}
         slidesPerView={1}
         centeredSlides={true}
