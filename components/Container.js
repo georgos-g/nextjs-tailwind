@@ -1,5 +1,5 @@
 // create a container component
 
 export default function Container({ children }) {
-  return <div className=''>{children}</div>;
+  return <div className='w-full'>{children}</div>;
 }

@@ -26,8 +26,8 @@ export default function Services() {
           {/* ========= Cards ========== */}
           <div className='flex flex-wrap pb-6 justify-evenly '>
             <MoveUp delay={0}>
-              <div className='flex p-4'>
-                <div className='bg-slate-100 rounded-none shadow-xl card  h-auto sm:h-72 w-33 w-[340px] sm:w-[480px]'>
+              <div className='flex p-2 xs:p-4'>
+                <div className='bg-slate-100 rounded-none shadow-xl card  h-auto sm:h-72  w-[301px] sm:w-[480px]'>
                   <div className='card-body'>
                     <div className='pb-4'>
                       <ProgrammingIcon />
@@ -44,8 +44,8 @@ export default function Services() {
             </MoveUp>
 
             <MoveUp delay={0.5}>
-              <div className='flex p-4'>
-                <div className='bg-slate-100 rounded-none shadow-xl card h-auto sm:h-72  w-[340px] sm:w-[480px]'>
+              <div className='flex p-2 xs:p-4'>
+                <div className='bg-slate-100 rounded-none shadow-xl card h-auto sm:h w-[301px] sm:w-[480px]'>
                   <div className='card-body'>
                     <div className='pb-4'>
                       <FrameworksIcon />
@@ -61,8 +61,8 @@ export default function Services() {
             </MoveUp>
 
             <MoveUp delay={1}>
-              <div className='flex p-4'>
-                <div className='bg-slate-100 rounded-none shadow-xl card h-auto sm:h-72 w-33 w-[340px] sm:w-[480px]'>
+              <div className='flex p-2 xs:p-4'>
+                <div className='bg-slate-100 rounded-none shadow-xl card h-auto sm:h-72  w-[301px] sm:w-[480px]'>
                   <div className='card-body'>
                     <div className='pb-4'>
                       <ContentCreationIcon />
@@ -86,12 +86,12 @@ export default function Services() {
         <div className='container flex flex-wrap p-1 pb-20 mx-auto '>
           {/* left text card */}
           <div className='px-2 py-4 lg:w-1/2 md:px-4 '>
-            <div className='flex flex-col p-4 shadow-xl md:h-full sm:p-10 bg-slate-100'>
+            <div className='flex flex-col p-6 shadow-xl md:h-full sm:p-10 bg-slate-100'>
               {/* text */}
               <div>
-                <h2 className='pb-6 project_title'>my goals</h2>
+                <h2 className='pb-0 sm:pb-6 project_title'>my goals</h2>
                 {/* <p className='mb-4 text-base uppercase sm:text-xl font-openSansLight '> */}
-                <p className='mb-4 uppercase section_sub_header sm:text-lg '>
+                <p className='mb-0 uppercase sm:mb-4 section_sub_header sm:text-lg '>
                   <br /> I have a serious passion for creating intuitive,
                   dynamic user experiences. <br />
                   <br />

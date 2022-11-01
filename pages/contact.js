@@ -11,7 +11,7 @@ export default function Contact() {
     <section id='contact' className=''>
       <div className='flex flex-col justify-center text-center bg-[#777] py-52'>
         <div className=''>
-          <p className='text-5xl leading-snug tracking-wide font-montserratThin text-slate-50 '>
+          <p className='px-4 text-5xl leading-snug tracking-wide font-montserratThin text-slate-50 '>
             FIND OUT WHAT I CAN DO FOR YOU
           </p>
 
