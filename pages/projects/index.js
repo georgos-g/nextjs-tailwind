@@ -57,7 +57,7 @@ export default function Projects({ posts, allCategories }) {
                     {/* ======= Item ======== */}
                     <div
                       // set 'items' and category in css class to activate filtering
-                      className={`lg:w-1/3 md:w-1/2  pb-1 md:pb-0 items ${post.categories
+                      className={`lg:w-1/3 md:w-1/2 pb-1 md:pb-0 items ${post.categories
                         .toString()
                         // replace comma with space
                         .replace(/,/g, ' ')} `}
@@ -66,8 +66,8 @@ export default function Projects({ posts, allCategories }) {
                       <div className='flex flex-col justify-center w-full h-full z-1'>
                         <Image
                           className='object-cover'
-                          width={999}
-                          height={444}
+                          width={700}
+                          height={400}
                           src={post.cover}
                           alt={post.alt}
                         />

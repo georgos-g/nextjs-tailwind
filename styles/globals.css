@@ -89,6 +89,51 @@
 }
 
 @layer utilities {
+  h1 {
+    padding: 0 0 14px 0;
+    font-size: 1.3em;
+    font-family: 'Open Sans 400';
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgb(31 41 55);
+  }
+
+  h2 {
+    padding: 0 0 10px 0;
+    font-size: 1.1em;
+    color: rgb(55 65 81);
+    font-family: 'Open Sans 400';
+    letter-spacing: 3px;
+  }
+
+  h3 {
+    font-size: 0.9em;
+    color: rgb(55 65 81);
+    font-family: 'Open Sans 300';
+    letter-spacing: 2px;
+  }
+  p {
+    /* font-size: 0.9em; */
+    /* color: rgb(55 65 81);
+    font-family: 'Open Sans 300';
+    letter-spacing: 2px; */
+  }
+
+  a {
+    /* margin-top: 15px; */
+    color: gray;
+    text-decoration: none;
+  }
+  a :hover {
+    color: #fff;
+  }
+  li {
+    padding: 0 0 10px 0;
+    margin-left: 16px;
+    list-style-type: disc;
+    color: rgb(55 65 81);
+  }
+
   .active {
     color: white;
     font-weight: 400;

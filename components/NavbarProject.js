@@ -50,7 +50,6 @@ const NavbarProject = () => {
       }
     };
     const handleClickOutside = (e) => {
-      console.log('EVENT PRJ', e);
       if (
         isOpen &&
         e.target.className !== 'mobileNavPrj' &&

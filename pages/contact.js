@@ -17,8 +17,11 @@ export default function Contact() {
 
           {/* center button  */}
           <div className='flex justify-center pt-20'>
-            <button className='text-lg rounded-none btn btn-wide '>
-              <a href='&#109;&#097;&#105;&#108;&#116;&#111;&#058;&#109;&#097;&#105;&#108;&#064;&#103;&#101;&#111;&#114;&#103;&#111;&#115;&#045;&#103;&#097;&#107;&#105;&#115;&#046;&#099;&#111;&#109;'>
+            <button className='text-lg rounded-none btn btn-wide hover:bg-gray-600'>
+              <a
+                className='text-slate-50'
+                href='&#109;&#097;&#105;&#108;&#116;&#111;&#058;&#109;&#097;&#105;&#108;&#064;&#103;&#101;&#111;&#114;&#103;&#111;&#115;&#045;&#103;&#097;&#107;&#105;&#115;&#046;&#099;&#111;&#109;'
+              >
                 get in touch
               </a>
             </button>

@@ -5,6 +5,7 @@ import { GET_ALL_POSTS_AND_CATEGORIES } from '../../lib/queries';
 import Slider from '../../components/Slider';
 
 import NavbarProject from '../../components/NavbarProject';
+import markdownToHtml from '../../lib/markdownToHtml';
 
 // get static paths for each post
 export async function getStaticPaths() {
@@ -46,15 +47,17 @@ export async function getStaticProps({ params }) {
   const post = await data.posts.data.find((post) => {
     return post.attributes.Slug === params.slug;
   });
-
+  // convert markdown from post content to html
+  const postContent = await markdownToHtml(post.attributes.Content);
   return {
     props: {
       post,
+      postContent,
     },
   };
 }
 
-export default function Project({ post }) {
+export default function Project({ post, postContent }) {
   return (
     <>
       <NavbarProject />
@@ -78,7 +81,7 @@ export default function Project({ post }) {
             <div className='flex flex-wrap justify-center h-full bg-slate-50'>
               {/* Image */}
 
-              <div className='max-w-full lg:w-1/2'>
+              <div className='h-full max-w-full lg:w-1/2'>
                 <div className=''>
                   {/* if post has no media entries show Cover img */}
                   {post.attributes.Media.data.length === 0 ? (
@@ -101,8 +104,9 @@ export default function Project({ post }) {
                 </div>
               </div>
               {/* Text */}
-              <div className='px-4 py-6 sm:px-8 lg:w-1/2'>
-                <p>{post.attributes.Content}</p>
+              <div className='px-4 py-5 lg:py-8 sm:px-8 lg:w-1/2'>
+                {/* show {postContent} in html format */}
+                <div dangerouslySetInnerHTML={{ __html: postContent }} />
               </div>
             </div>
           </div>

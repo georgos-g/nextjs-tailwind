@@ -45,7 +45,7 @@ export default function Services() {
 
             <MoveUp delay={0.5}>
               <div className='flex p-2 xs:p-4'>
-                <div className='bg-slate-100 rounded-none shadow-xl card h-auto sm:h w-[301px] sm:w-[480px]'>
+                <div className='bg-slate-100 rounded-none shadow-xl card h-auto sm:h-72 w-[301px] sm:w-[480px]'>
                   <div className='card-body'>
                     <div className='pb-4'>
                       <FrameworksIcon />

@@ -62,7 +62,6 @@ const Navbar = () => {
       }
     };
     const handleClickOutside = (e) => {
-      console.log('EVENT ', e);
       if (
         isOpen &&
         e.target.className !== 'mobileNav' &&
