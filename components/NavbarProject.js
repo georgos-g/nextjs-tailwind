@@ -36,8 +36,37 @@ const Links = [
 const NavbarProject = () => {
   // const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
-  const toggle = () => setIsOpen(!isOpen);
+  const toggle_nav = () => setIsOpen(!isOpen);
 
+  // if clicking and scrolling outside of the div with className .mobileNavPrj toggle visibility
+  useEffect(() => {
+    const handleScrollOutside = (e) => {
+      if (
+        isOpen &&
+        e.target.className !== 'mobileNavPrj' &&
+        e.path[1].tagName !== 'BUTTON'
+      ) {
+        setIsOpen(!isOpen);
+      }
+    };
+    const handleClickOutside = (e) => {
+      console.log('EVENT PRJ', e);
+      if (
+        isOpen &&
+        e.target.className !== 'mobileNavPrj' &&
+        e.path[0].tagName !== 'BUTTON' &&
+        e.path[1].tagName !== 'BUTTON'
+      ) {
+        setIsOpen(!isOpen);
+      }
+    };
+    document.addEventListener('click', handleClickOutside);
+    window.addEventListener('scroll', handleScrollOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+      window.removeEventListener('scroll', handleScrollOutside);
+    };
+  }, [isOpen]);
   return (
     <>
       <nav
@@ -50,7 +79,7 @@ const NavbarProject = () => {
             <div className='absolute inset-y-0 right-0 flex items-center md:hidden'>
               {/* responsive md-hidden */}
               <button
-                onClick={toggle}
+                onClick={toggle_nav}
                 type='button'
                 className='inline-flex items-center justify-center p-2 text-gray-500 rounded-[3px] hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-0 focus:ring-inset focus:ring-white'
                 aria-controls='mobile-menu'
@@ -122,12 +151,16 @@ const NavbarProject = () => {
             <div className='px-3 pt-1 pb-1 space-y-1 '></div>
             {Links.map((link, index) => {
               return (
-                <Link href={`/${link.url}`} key={index}>
+                <Link
+                  href={`/${link.url}`}
+                  key={index}
+                  className='mobileNavPrj'
+                >
                   <div className='mb-1 bg-gray-300'>
                     <a
-                      // toggle if cursor is out of menu
-                      onClick={toggle}
-                      className='block px-3 py-2 text-sm text-gray-800 hover:bg-gray-700 hover:text-white rounded-0 font-openSansLight'
+                      // toggle_nav if cursor is out of menu
+                      onClick={toggle_nav}
+                      className='block px-3 py-2 text-sm text-gray-800 hover:bg-gray-700 hover:text-white rounded-0 font-openSansLight '
                     >
                       {link.name}
                     </a>

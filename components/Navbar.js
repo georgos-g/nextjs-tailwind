@@ -50,6 +50,36 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // if clicking and scrolling outside of the div with className .mobileNav toggle visibility
+  useEffect(() => {
+    const handleScrollOutside = (e) => {
+      if (
+        isOpen &&
+        e.target.className !== 'mobileNav' &&
+        e.path[1].tagName !== 'BUTTON'
+      ) {
+        setIsOpen(!isOpen);
+      }
+    };
+    const handleClickOutside = (e) => {
+      console.log('EVENT ', e);
+      if (
+        isOpen &&
+        e.target.className !== 'mobileNav' &&
+        e.path[2].tagName !== 'DIV' &&
+        e.path[1].tagName !== 'BUTTON'
+      ) {
+        setIsOpen(!isOpen);
+      }
+    };
+    document.addEventListener('click', handleClickOutside);
+    window.addEventListener('scroll', handleScrollOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+      window.removeEventListener('scroll', handleScrollOutside);
+    };
+  }, [isOpen]);
+
   return (
     <>
       <nav
@@ -66,6 +96,7 @@ const Navbar = () => {
             <div className='absolute inset-y-0 right-0 flex items-center md:hidden'>
               {/* responsive md-hidden */}
               <button
+                // onClick toggle setIsOpen
                 onClick={toggle}
                 type='button'
                 className='inline-flex items-center justify-center p-2 text-gray-500 rounded-[3px] hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-0 focus:ring-inset focus:ring-white'
@@ -130,16 +161,12 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-
           {/* Mobile menu, show/hide based on menu state  */}
-          <div className={`${isOpen ? '' : 'hidden'} md:hidden pb-4`}>
-            <div
-              className='px-0 pt-1 pb-1 space-y-1 '
-              onMouseLeave={toggle}
-              // onClickOutside={toggle}
-              // onScroll={toggle}
-            >
+          <div className={`${isOpen ? '' : 'hidden'}  md:hidden pb-4`}>
+            <div className='px-0 pt-1 pb-1 space-y-1 '>
               {Links.map((link, index) => {
+                // // if clicked outside of the div or sroll call toggle function
+
                 return (
                   <Link
                     key={index}
@@ -149,7 +176,7 @@ const Navbar = () => {
                     offset={-63}
                     spy
                     to={link.url}
-                    className='cursor-pointer'
+                    className='cursor-pointer mobileNav'
                   >
                     <div className='mb-1 bg-gray-300'>
                       <div
