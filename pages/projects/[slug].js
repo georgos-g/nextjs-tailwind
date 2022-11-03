@@ -87,7 +87,7 @@ export default function Project({ post, postContent }) {
                   {post.attributes.Media.data.length === 0 ? (
                     <Image
                       key={post.id}
-                      className='object-cover '
+                      className='object-cover'
                       width={700}
                       height={500}
                       src={
