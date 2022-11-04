@@ -54,7 +54,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleScrollOutside = (e) => {
       if (
-        path &&
+        e.path &&
         isOpen &&
         e.target.className !== 'mobileNav' &&
         e.path[1].tagName !== 'BUTTON'
@@ -64,7 +64,7 @@ const Navbar = () => {
     };
     const handleClickOutside = (e) => {
       if (
-        path &&
+        e.path &&
         isOpen &&
         e.target.className !== 'mobileNav' &&
         e.path[2].tagName !== 'DIV' &&
