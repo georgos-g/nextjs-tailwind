@@ -74,22 +74,22 @@ export default function Projects({ posts, allCategories }) {
                         {/* Hover  */}
 
                         <div className='absolute z-10 w-full h-full opacity-100 cursor-pointer md:opacity-0 bg-black/70 md:hover:opacity-100 hover:transition hover:ease-in-out hover:duration-1000'>
+                          {/* <div> */}
                           {/* Hover Content */}
 
                           {/* tailwindcss move div on Hover 20px to right  */}
-                          <div className='flex flex-col justify-center w-full h-full px-8 hover:duration-1000 hover:translate-x-4'>
+                          <div className='flex flex-col justify-center w-full h-full px-8 hover:duration-1000 sm:hover:translate-x-4'>
                             {/* Category */}
-
                             {/* <span
-                          data-filter={post.categories
-                            .toString()
-                            .replace(/,/g, ' ')}
-                        >
-                          {post.categories.toString().replace(/,/g, ' ')}
-                        </span> */}
+                              data-filter={post.categories
+                                .toString()
+                                .replace(/,/g, ' ')}
+                            >
+                              {post.categories.toString().replace(/,/g, ' ')}
+                            </span> */}
 
                             {/* Title */}
-                            <h1 className='mb-2 text-[1em] xs:text-[1.25em] text-white uppercase'>
+                            <h1 className='mb-1 text-[1em] xs:text-[1.25em] text-white uppercase'>
                               {post.title}
                             </h1>
                             {/* Description */}

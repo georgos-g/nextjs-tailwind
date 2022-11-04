@@ -60,11 +60,22 @@ export async function getStaticProps() {
       alt: post?.attributes.Cover.data.attributes.alternativeText,
 
       // Seo
+
+      // if post has a seo title and seo description, use it, otherwise use the post title and description
       seo: {
-        title: post.attributes.PostSeo.SeoTitle,
-        description: post.attributes.PostSeo.SeoDescription,
-        id: post.attributes.PostSeo.id,
+        title: post.attributes.PostSeo.SeoTitle
+          ? post.attributes.PostSeo.SeoTitle
+          : post.attributes.Title,
+        description: post.attributes.PostSeo.SeoDescription
+          ? post.attributes.PostSeo.SeoDescription
+          : post.attributes.Description,
       },
+
+      // seo: {
+      //   title: post.attributes.PostSeo.SeoTitle,
+      //   description: post.attributes.PostSeo.SeoDescription,
+      //   id: post.attributes.PostSeo.id,
+      // },
 
       // get all categories from each post
       categories: post.attributes.categories.data.map((category) => {

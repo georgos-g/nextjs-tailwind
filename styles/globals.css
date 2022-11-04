@@ -112,6 +112,18 @@
     font-family: 'Open Sans 300';
     letter-spacing: 2px;
   }
+  /* when screen size is small change  h1 h2 h3 font size*/
+  @media (max-width: 640px) {
+    h1 {
+      font-size: 1.1em;
+    }
+    h2 {
+      font-size: 0.9em;
+    }
+    h3 {
+      font-size: 0.8em;
+    }
+  }
   p {
     /* font-size: 0.9em; */
     /* color: rgb(55 65 81);

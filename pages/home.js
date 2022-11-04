@@ -9,13 +9,13 @@ export default function HomeSection() {
   return (
     <>
       <section id='home'>
-        <div className='w-full h-auto sm:h-full bg-gradient-to-tl from-yellow-800 to-gray-900'>
+        <div className='w-full sm:h-full bg-gradient-to-tl from-yellow-800 to-gray-900'>
           <Image
             width={1920}
             height={1080}
             src='/img/hero_bg.jpg'
             alt='hero'
-            className='absolute object-cover w-full h-full mix-blend-overlay'
+            className='absolute object-cover w-full h-screen mix-blend-overlay'
           />
           <div className='flex flex-col justify-center max-w-[300px] h-screen pb-20 md:pl-14 xs:pl-6 sm:pl-8 pl-4'>
             <AnimatedText />

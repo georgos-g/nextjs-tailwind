@@ -104,7 +104,7 @@ export default function Project({ post, postContent }) {
                 </div>
               </div>
               {/* Text */}
-              <div className='px-4 py-5 lg:py-8 sm:px-8 lg:w-1/2'>
+              <div className='px-6 py-5 lg:py-8 sm:px-8 lg:w-1/2'>
                 {/* show {postContent} in html format */}
                 <div dangerouslySetInnerHTML={{ __html: postContent }} />
               </div>
