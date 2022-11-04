@@ -42,6 +42,7 @@ const NavbarProject = () => {
   useEffect(() => {
     const handleScrollOutside = (e) => {
       if (
+        path &&
         isOpen &&
         e.target.className !== 'mobileNavPrj' &&
         e.path[1].tagName !== 'BUTTON'
@@ -51,6 +52,7 @@ const NavbarProject = () => {
     };
     const handleClickOutside = (e) => {
       if (
+        path &&
         isOpen &&
         e.target.className !== 'mobileNavPrj' &&
         e.path[0].tagName !== 'BUTTON' &&

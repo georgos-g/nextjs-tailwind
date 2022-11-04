@@ -20,7 +20,8 @@ export default function Contact() {
             <button className='text-lg rounded-none btn btn-wide hover:bg-gray-600'>
               <a
                 className='text-slate-50'
-                href='&#109;&#097;&#105;&#108;&#116;&#111;&#058;&#109;&#097;&#105;&#108;&#064;&#103;&#101;&#111;&#114;&#103;&#111;&#115;&#045;&#103;&#097;&#107;&#105;&#115;&#046;&#099;&#111;&#109;'
+                // base64 encoded email address
+                href={`mailto:${atob('bWFpbEBnZW9yZ29zLWdha2lzLmNvbQ==')}`}
               >
                 get in touch
               </a>
@@ -58,8 +59,9 @@ export default function Contact() {
               <AddressMailIcon />
               <div className='pl-4'>
                 <p className='section_sub_header'>EMAIL</p>
-                <p className='uppercase text-[15px]'>
-                  mail[at]georgos-gakis.com
+                <p className='uppercase'>
+                  {/* base64  */}
+                  {`${atob('bWFpbEBnZW9yZ29zLWdha2lzLmNvbQ==')}`}
                 </p>
               </div>
             </div>
