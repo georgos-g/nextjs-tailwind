@@ -21,7 +21,7 @@ export default function Imprint() {
           <br />
           www.georgos-gakis.com
           <br />
-          &#109;&#097;&#105;&#108;&#064;&#103;&#101;&#111;&#114;&#103;&#111;&#115;&#045;&#103;&#097;&#107;&#105;&#115;&#046;&#099;&#111;&#109;
+          mail[at]georgos-gakis[dot]com
           <br />
           <br />
           Responsible for the contents of these sides in the sense of TDG § 6
@@ -208,10 +208,7 @@ export default function Imprint() {
           <p>50677 Köln</p>
           <p>Deutschland</p>
           <p>Phone: +49 221 3762692</p>
-          <p>
-            Email:
-            &#109;&#097;&#105;&#108;&#064;&#103;&#101;&#111;&#114;&#103;&#111;&#115;&#045;&#103;&#097;&#107;&#105;&#115;&#046;&#099;&#111;&#109;
-          </p>
+          <p>Email: mail[at]georgos-gakis[dot]com</p>
           <p>Website: www.georgos-gakis.com</p>
           <p className='imprint_headers'>3. Cookies</p>
           <p>

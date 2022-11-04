@@ -58,8 +58,8 @@ export default function Contact() {
               <AddressMailIcon />
               <div className='pl-4'>
                 <p className='section_sub_header'>EMAIL</p>
-                <p className='uppercase '>
-                  &#109;&#097;&#105;&#108;&#064;&#103;&#101;&#111;&#114;&#103;&#111;&#115;&#045;&#103;&#097;&#107;&#105;&#115;&#046;&#099;&#111;&#109;
+                <p className='uppercase text-[15px]'>
+                  mail[at]georgos-gakis.com
                 </p>
               </div>
             </div>
