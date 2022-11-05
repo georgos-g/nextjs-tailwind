@@ -44,7 +44,7 @@ export default function Projects({ posts, allCategories }) {
         </div>
 
         {/*  ========== Posts Content Wrapper =========*/}
-        <div className='max-w-[1920px] pb-2 pt-4 flex flex-col md:flex-row flex-wrap justify-center w-full mx-auto gallery'>
+        <div className='max-w-[1920px] pb-2 pt-4 flex flex-col md:flex-row flex-wrap justify-center w-full mx-auto gallery '>
           {/* check if posts exist map thru them and save the results in a list sorted by date */}
           {posts &&
             posts
@@ -55,13 +55,13 @@ export default function Projects({ posts, allCategories }) {
                     {/* ======= Item ======== */}
                     <div
                       // set 'items' and category in css class to activate filtering
-                      className={`lg:w-1/3 md:w-1/2 pb-1 md:pb-0 items ${post.categories
+                      className={`lg:w-1/3 md:w-1/2 pb-2 md:pb-0 items ${post.categories
                         .toString()
                         // replace comma with space
                         .replace(/,/g, ' ')} `}
                     >
                       {/* Img and Text */}
-                      <div className='flex flex-col justify-center w-full h-full z-1'>
+                      <div className='flex flex-col justify-center w-full h-full pb-0 sm:pb-0 z-1'>
                         <Image
                           className='object-cover'
                           width={700}
