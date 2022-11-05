@@ -55,13 +55,14 @@ export default function Projects({ posts, allCategories }) {
                     {/* ======= Item ======== */}
                     <div
                       // set 'items' and category in css class to activate filtering
-                      className={`lg:w-1/3 md:w-1/2 pb-2 md:pb-0 items ${post.categories
+                      className={`lg:w-1/3 md:w-1/2  items ${post.categories
                         .toString()
                         // replace comma with space
                         .replace(/,/g, ' ')} `}
                     >
                       {/* Img and Text */}
-                      <div className='flex flex-col justify-center w-full h-full pb-0 sm:pb-0 z-1'>
+                      <div className='flex flex-col justify-center w-full h-full divide-y md:divide-y-0 z-1 '>
+                        {/* create a div with a white line only on the bottom 1px */}
                         <Image
                           className='object-cover'
                           width={700}
