@@ -5,9 +5,7 @@ import Link from 'next/link';
 
 export default function Projects({ posts, allCategories }) {
   useEffect(() => {
-    setTimeout(() => {
-      initIsotope();
-    }, 1000);
+    initIsotope();
   }, []);
   return (
     <>
