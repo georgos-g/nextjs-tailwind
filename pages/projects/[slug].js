@@ -3,6 +3,7 @@ import Image from 'next/future/image';
 import { ApolloClient, InMemoryCache } from '@apollo/client';
 import { GET_ALL_POSTS_AND_CATEGORIES } from '../../lib/queries';
 import Slider from '../../components/Slider';
+import Link from 'next/link';
 
 import NavbarProject from '../../components/NavbarProject';
 import markdownToHtml from '../../lib/markdownToHtml';
@@ -67,7 +68,6 @@ export default function Project({ post, postContent }) {
       {/* Project Wrapper */}
       <div className='sm:h-screen bg-slate-200'>
         {/* Project Headers */}
-        {/* <div className='container flex justify-center mx-auto py-14'> */}
         <div className='container justify-center mx-auto py-14'>
           <div className='px-4 sm:px-8 min-h-72'>
             <div className=''>
@@ -108,6 +108,13 @@ export default function Project({ post, postContent }) {
                 {/* show {postContent} in html format */}
                 <div dangerouslySetInnerHTML={{ __html: postContent }} />
               </div>
+            </div>
+            <div className='flex justify-center lg:justify-end '>
+              <Link href='/#projects'>
+                <a className='flex items-center justify-center w-48 px-3 py-2 mt-6 font-bold text-white uppercase rounded-none text-md bg-slate-500 hover:bg-slate-700'>
+                  Back to Projects
+                </a>
+              </Link>
             </div>
           </div>
         </div>

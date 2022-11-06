@@ -73,10 +73,8 @@ export default function Projects({ posts, allCategories }) {
                         {/* Hover  */}
 
                         <div className='absolute z-10 w-full h-full opacity-100 cursor-pointer md:opacity-0 bg-black/70 md:hover:opacity-100 hover:transition hover:ease-in-out hover:duration-1000'>
-                          {/* <div> */}
                           {/* Hover Content */}
-
-                          {/* tailwindcss move div on Hover 20px to right  */}
+                          {/* move div on Hover 20px to right  */}
                           <div className='flex flex-col justify-center w-full h-full px-8 hover:duration-1000 sm:hover:translate-x-4'>
                             {/* Category */}
                             {/* <span
@@ -92,9 +90,12 @@ export default function Projects({ posts, allCategories }) {
                               {post.title}
                             </h1>
                             {/* Description */}
-                            <p className='text-gray-400 text-[0.8em] xs:text-[1em] pb-6 uppercase'>
+                            <p className='text-gray-400 text-[0.8em] xs:text-[1em] pb-6 uppercase '>
                               {post.description}
                             </p>
+                            <div className='text-[13px] bottom-0 w-[130px] text-gray-500 hover:text-white uppercase drop-shadow-sm'>
+                              -- more details --
+                            </div>
                           </div>
                         </div>
                       </div>

@@ -230,12 +230,16 @@
     letter-spacing: 2px;
     /* text-transform: uppercase; */
   }
+  /* create class text-shadow 2px white ; */
+
+  .text_shadow_white {
+    text-shadow: #858585 1px 1px 1px;
+  }
 
   /* Swiper  */
 
   .swiper-pagination-bullet {
     background: #fff;
-
     border: 1px solid rgb(77, 77, 77);
     width: 13px;
     height: 13px;
