@@ -95,7 +95,7 @@ export default function Projects({ posts, allCategories }) {
                               {post.description}
                             </p>
                             <div className='flex justify-start w-[140px] content-center  hover:justify-between  hover:text-white hover:transition-transform '>
-                              <div className='text-[13px] pr-1 bottom-0 text-gray-500 hover:text-white uppercase drop-shadow-sm '>
+                              <div className='text-[13px] pr-1 pt-1 text-gray-500 hover:text-white uppercase drop-shadow-sm '>
                                 more details
                               </div>
                               <div className='pl-2'>
