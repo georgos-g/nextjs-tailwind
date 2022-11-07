@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Image from 'next/future/image';
 import initIsotope from '../../common/initIsotope';
 import Link from 'next/link';
+import { MoreDetailsIcon } from '../../components/Icons';
 
 export default function Projects({ posts, allCategories }) {
   useEffect(() => {
@@ -93,8 +94,13 @@ export default function Projects({ posts, allCategories }) {
                             <p className='text-gray-400 text-[0.8em] xs:text-[1em] pb-6 uppercase '>
                               {post.description}
                             </p>
-                            <div className='text-[13px] bottom-0 w-[130px] text-gray-500 hover:text-white uppercase drop-shadow-sm'>
-                              -- more details --
+                            <div className='flex justify-start w-[140px] content-center  hover:justify-between  hover:text-white hover:transition-transform '>
+                              <div className='text-[13px] pr-1 bottom-0 text-gray-500 hover:text-white uppercase drop-shadow-sm '>
+                                more details
+                              </div>
+                              <div className='pl-2'>
+                                <MoreDetailsIcon />
+                              </div>
                             </div>
                           </div>
                         </div>

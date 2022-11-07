@@ -9,6 +9,7 @@ import { basic_laptop } from 'react-icons-kit/linea/basic_laptop';
 import { basic_map } from 'react-icons-kit/linea/basic_map';
 import { basic_paperplane } from 'react-icons-kit/linea/basic_paperplane';
 import { basic_smartphone } from 'react-icons-kit/linea/basic_smartphone';
+import { arrows_slim_right } from 'react-icons-kit/linea/arrows_slim_right';
 
 export const MagicMouseIcon = () => (
   <div style={{ color: 'gray' }}>
@@ -50,5 +51,12 @@ export const AddressMailIcon = () => (
 export const AddressPhoneIcon = () => (
   <div style={{ color: 'gray' }}>
     <Icon size={64} icon={basic_smartphone} />
+  </div>
+);
+export const MoreDetailsIcon = () => (
+  /* change icon color on hover to white */
+
+  <div style={{ color: 'gray' }}>
+    <Icon size={27} icon={arrows_slim_right} />
   </div>
 );

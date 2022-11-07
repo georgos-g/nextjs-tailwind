@@ -236,6 +236,13 @@
     text-shadow: #858585 1px 1px 1px;
   }
 
+  .icon_hover_right {
+    color: fuchsia;
+  }
+  .icon_hover_right:hover {
+    color: white !important;
+  }
+
   /* Swiper  */
 
   .swiper-pagination-bullet {
