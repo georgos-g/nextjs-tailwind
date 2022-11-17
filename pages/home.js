@@ -17,7 +17,7 @@ export default function HomeSection() {
             alt='hero'
             className='absolute object-cover w-full h-screen mix-blend-overlay'
           />
-          <div className='flex flex-col justify-center max-w-[300px] h-screen pb-20 md:pl-14 xs:pl-6 sm:pl-8 pl-4'>
+          <div className='flex flex-col justify-center max-w-[480px] h-screen pb-20 md:pl-14 xs:pl-6 sm:pl-8 pl-4'>
             <AnimatedText />
             <SayHelloButton />
           </div>
