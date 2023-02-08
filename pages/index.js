@@ -71,12 +71,6 @@ export async function getStaticProps() {
           : post.attributes.Description,
       },
 
-      // seo: {
-      //   title: post.attributes.PostSeo.SeoTitle,
-      //   description: post.attributes.PostSeo.SeoDescription,
-      //   id: post.attributes.PostSeo.id,
-      // },
-
       // get all categories from each post
       categories: post.attributes.categories.data.map((category) => {
         return category.attributes.Category;
