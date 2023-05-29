@@ -2,9 +2,9 @@
 const urlEnv = process.env.NEXT_PUBLIC_API_ENDPOINT;
 
 // remove https and port from url
-const apiUrl = urlEnv.replace(/^https?:\/\//, '').replace(/:\d+/, '');
+// const apiUrl = urlEnv.replace(/^https?:\/\//, '').replace(/:\d+/, '');
 
-const apiUrl = 'res.cloudinary.com';
+const apiUrl1 = 'res.cloudinary.com';
 
 module.exports = {
   reactStrictMode: true,
@@ -22,6 +22,6 @@ module.exports = {
 
   // Images
   images: {
-    domains: [apiUrl],
+    domains: [apiUrl1],
   },
 };
