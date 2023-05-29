@@ -38,10 +38,12 @@ export default function Slider({ ...post }) {
             <SwiperSlide key={image.id}>
               <Image
                 src={
-                  process.env.NEXT_PUBLIC_API_ENDPOINT + image.attributes.url
+                  // process.env.NEXT_PUBLIC_API_ENDPOINT +
+                  image.attributes.url
                 }
                 alt={
-                  process.env.NEXT_PUBLIC_API_ENDPOINT + image.attributes.alt
+                  // process.env.NEXT_PUBLIC_API_ENDPOINT +
+                  image.attributes.alt
                 }
                 width={900}
                 height={500}

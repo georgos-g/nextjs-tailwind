@@ -45,14 +45,16 @@ export async function getStaticProps() {
       content: post.attributes.Content,
       slug: post.attributes.Slug,
       cover:
-        process.env.NEXT_PUBLIC_API_ENDPOINT +
+        // process.env.NEXT_PUBLIC_API_ENDPOINT +
         post?.attributes.Cover.data.attributes.url,
 
       // show all Media img in the post
       media: post?.attributes.Media.data.map((media) => {
         return {
           id: media.id,
-          url: process.env.NEXT_PUBLIC_API_ENDPOINT + media.attributes.url,
+          url:
+            // process.env.NEXT_PUBLIC_API_ENDPOINT +
+            media.attributes.url,
           alt: media.attributes.alternativeText,
         };
       }),

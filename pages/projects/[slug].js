@@ -91,7 +91,7 @@ export default function Project({ post, postContent }) {
                       width={700}
                       height={500}
                       src={
-                        process.env.NEXT_PUBLIC_API_ENDPOINT +
+                        // process.env.NEXT_PUBLIC_API_ENDPOINT +
                         post.attributes.Cover.data.attributes.url
                       }
                       alt={
