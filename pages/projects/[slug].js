@@ -1,11 +1,11 @@
 import React from 'react';
-import Image from 'next/future/image';
+import Image from 'next/image';
 import { ApolloClient, InMemoryCache } from '@apollo/client';
 import { GET_ALL_POSTS_AND_CATEGORIES } from '../../lib/queries';
 import Slider from '../../components/Slider';
 import Link from 'next/link';
 
-import NavbarProject from '../../components/NavbarProject';
+import Navbar from '../../components/Navbar';
 import markdownToHtml from '../../lib/markdownToHtml';
 
 // get static paths for each post
@@ -19,14 +19,12 @@ export async function getStaticPaths() {
     query: GET_ALL_POSTS_AND_CATEGORIES,
   });
 
-  const paths = data.posts.data.map((post) => {
-    return {
-      params: {
-        slug: post.attributes.Slug,
-        id: post.id,
-      },
-    };
-  });
+  const paths = data.posts.data.map((post) => ({
+    params: {
+      slug: post.attributes.Slug,
+      id: post.id,
+    },
+  }));
 
   return {
     paths,
@@ -45,9 +43,9 @@ export async function getStaticProps({ params }) {
     query: GET_ALL_POSTS_AND_CATEGORIES,
   });
 
-  const post = await data.posts.data.find((post) => {
-    return post.attributes.Slug === params.slug;
-  });
+  const post = data.posts.data.find(
+    (post) => post.attributes.Slug === params.slug
+  );
   // convert markdown from post content to html
   const postContent = await markdownToHtml(post.attributes.Content);
   return {
@@ -59,9 +57,11 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Project({ post, postContent }) {
+  const { Title, Description, Cover, Media } = post.attributes;
   return (
     <>
-      <NavbarProject />
+      <Navbar />
+
       {/* White space top */}
       <div className='pt-[63px]'></div>
 
@@ -71,32 +71,24 @@ export default function Project({ post, postContent }) {
         <div className='container justify-center mx-auto py-14'>
           <div className='px-4 sm:px-8 min-h-72'>
             <div className=''>
-              <h1 className='project_title'>{post.attributes.Title}</h1>
-              <h2 className='pb-10 project_sub_title'>
-                {post.attributes.Description}
-              </h2>
+              <h1 className='project_title'>{Title}</h1>
+              <h2 className='pb-10 project_sub_title'>{Description}</h2>
             </div>
 
             {/* Image & Text */}
             <div className='flex flex-wrap justify-center h-full bg-slate-50'>
               {/* Image */}
-
               <div className='h-full max-w-full lg:w-1/2'>
                 <div className=''>
                   {/* if post has no media entries show Cover img */}
-                  {post.attributes.Media.data.length === 0 ? (
+                  {Media.data.length === 0 ? (
                     <Image
                       key={post.id}
                       className='object-cover'
                       width={700}
                       height={500}
-                      src={
-                        // process.env.NEXT_PUBLIC_API_ENDPOINT +
-                        post.attributes.Cover.data.attributes.url
-                      }
-                      alt={
-                        post.attributes.Cover.data.attributes.alternativeText
-                      }
+                      src={Cover.data.attributes.url}
+                      alt={Cover.data.attributes.alternativeText}
                     />
                   ) : (
                     <Slider {...post} />
@@ -111,9 +103,9 @@ export default function Project({ post, postContent }) {
             </div>
             <div className='flex justify-center lg:justify-end '>
               <Link href='/#projects'>
-                <a className='flex items-center justify-center w-48 px-3 py-2 mt-6 font-bold text-white uppercase rounded-none text-md bg-slate-500 hover:bg-slate-700'>
+                <div className='flex items-center justify-center w-48 px-3 py-2 mt-6 font-bold text-white uppercase rounded-none text-md bg-slate-500 hover:bg-slate-700'>
                   Back to Projects
-                </a>
+                </div>
               </Link>
             </div>
           </div>

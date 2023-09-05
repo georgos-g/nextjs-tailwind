@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+
 import Services from './services';
 import About from './about';
 import Contact from './contact';
@@ -10,6 +11,16 @@ import { ApolloClient, InMemoryCache } from '@apollo/client';
 import { GET_ALL_POSTS_AND_CATEGORIES } from '../lib/queries';
 
 export default function Home({ posts, allCategories }) {
+  useEffect(() => {
+    // Reset the URL to the root path ('/') when the component mounts
+    window.history.pushState(null, null, '/');
+    // Add an event listener to handle the popstate event, triggered when the user clicks the back button
+    window.addEventListener('popstate', function (event) {
+      // Reset the URL to the root path ('/') when the back button is clicked
+      window.history.pushState(null, null, '/');
+    });
+  }, []);
+
   return (
     <>
       {/* add a responsive fullscreen bg-img to section */}

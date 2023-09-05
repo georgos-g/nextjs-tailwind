@@ -4,7 +4,7 @@ import MoveAnimatedText from './MoveAnimatedText';
 
 export default function AnimatedText() {
   const [titleTypewriter, count] = useTypewriter({
-    words: ['(JUNIOR) FRONTEND DEVELOPER', 'WEB DESIGNER', 'MEDIA DESIGNER'],
+    words: ['FRONTEND DEVELOPER', 'WEB DESIGNER', 'MEDIA DESIGNER'],
     loop: true,
     typeSpeed: 100,
     deleteSpeed: 30,
