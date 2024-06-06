@@ -21,7 +21,7 @@ export default function StyleTest() {
               wir Dir 1:1 umsetzbare Lösungsansätze auf, die wirklich
               <span className='font-bold'> funktionieren.</span>
             </p>
-            <button className='absolute transform translate-x-1/2 right-1/2 bottom-0 mb-[-26px] px-8 py-4 font-bold text-[12px] text-black bg-yellow-500'>
+            <button className='absolute transform translate-x-1/2 right-1/2 bottom-0 mb-[-26px] px-4 py-2 xs:px-8 xs:py-4 font-bold text-[10px] xs:text-[11px] sm:text-[12px] text-black bg-yellow-500'>
               JETZT KOSTENLOSES TICKET SICHERN!
             </button>
           </div>
