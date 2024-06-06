@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import Image from 'next/future/image';
-import initIsotope from '../../common/initIsotope';
+import Image from 'next/image';
 import Link from 'next/link';
+import React, { useEffect } from 'react';
+import initIsotope from '../../common/initIsotope';
 import { MoreDetailsIcon } from '../../components/Icons';
 
 export default function Projects({ posts, allCategories }) {

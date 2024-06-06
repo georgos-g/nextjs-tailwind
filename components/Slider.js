@@ -1,5 +1,5 @@
+import Image from 'next/image';
 import React from 'react';
-import Image from 'next/future/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -8,7 +8,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 // import required modules
-import { Autoplay, Pagination, Navigation } from 'swiper';
+import { Autoplay, Navigation, Pagination } from 'swiper';
 
 export default function Slider({ ...post }) {
   return (
@@ -33,24 +33,24 @@ export default function Slider({ ...post }) {
         modules={[Autoplay, Pagination, Navigation]}
       >
         {/* map through the images */}
-        {post?.attributes.Media.data.map((image) => {
+        {post?.attributes.Media?.data.map((image) => {
           return (
             <SwiperSlide key={image.id}>
-              <Image
-                src={
-                  // process.env.NEXT_PUBLIC_API_ENDPOINT +
-                  image.attributes.url
-                }
-                alt={
-                  // process.env.NEXT_PUBLIC_API_ENDPOINT +
-                  image.attributes.alt
-                }
-                width={900}
-                height={500}
-                layout='responsive'
-                // objectFit='cover'
-                quality={100}
-              />
+              <div
+                style={{
+                  position: 'relative',
+                  width: '100%',
+                  height: '0',
+                  paddingBottom: '56.25%',
+                }}
+              >
+                <Image
+                  src={image.attributes.url}
+                  alt={image.attributes.alt}
+                  layout='fill'
+                  objectFit='cover'
+                />
+              </div>
             </SwiperSlide>
           );
         })}

@@ -19,7 +19,7 @@ export default function Contact() {
           <div className='flex justify-center pt-20'>
             <button className='text-lg rounded-none btn btn-wide hover:bg-gray-600'>
               <a
-                className='text-slate-50'
+                className='uppercase text-black/70 hover:text-white'
                 // base64 encoded email address
                 href={`mailto:${atob('bWFpbEBnZW9yZ29zLWdha2lzLmNvbQ==')}`}
               >

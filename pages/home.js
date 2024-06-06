@@ -1,8 +1,8 @@
+import Image from 'next/image';
 import React from 'react';
-import Image from 'next/future/image';
-import { MagicMouseIcon } from '../components/Icons';
 import { Link } from 'react-scroll';
 import AnimatedText from '../components/AnimatedText';
+import { MagicMouseIcon } from '../components/Icons';
 import SayHelloButton from '../components/SayHelloButton';
 
 export default function HomeSection() {

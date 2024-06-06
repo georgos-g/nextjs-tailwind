@@ -1,10 +1,11 @@
-import React from 'react';
-import Image from 'next/image';
 import { ApolloClient, InMemoryCache } from '@apollo/client';
-import { GET_ALL_POSTS_AND_CATEGORIES } from '../../lib/queries';
-import Slider from '../../components/Slider';
+import Image from 'next/image';
 import Link from 'next/link';
+import React from 'react';
+import Slider from '../../components/Slider';
+import { GET_ALL_POSTS_AND_CATEGORIES } from '../../lib/queries';
 
+// import AudioPlayer from '../../components/AudioPlayer';
 import Navbar from '../../components/Navbar';
 import markdownToHtml from '../../lib/markdownToHtml';
 
@@ -46,6 +47,7 @@ export async function getStaticProps({ params }) {
   const post = data.posts.data.find(
     (post) => post.attributes.Slug === params.slug
   );
+
   // convert markdown from post content to html
   const postContent = await markdownToHtml(post.attributes.Content);
   return {
@@ -58,6 +60,12 @@ export async function getStaticProps({ params }) {
 
 export default function Project({ post, postContent }) {
   const { Title, Description, Cover, Media } = post.attributes;
+
+  const imgStyles = {
+    position: 'relative',
+    overflow: 'hidden',
+    height: '400px',
+  };
   return (
     <>
       <Navbar />
@@ -66,7 +74,7 @@ export default function Project({ post, postContent }) {
       <div className='pt-[63px]'></div>
 
       {/* Project Wrapper */}
-      <div className='sm:h-screen bg-slate-200'>
+      <div className='bg-slate-200'>
         {/* Project Headers */}
         <div className='container justify-center mx-auto py-14'>
           <div className='px-4 sm:px-8 min-h-72'>
@@ -75,20 +83,27 @@ export default function Project({ post, postContent }) {
               <h2 className='pb-10 project_sub_title'>{Description}</h2>
             </div>
 
-            {/* Image & Text */}
+            {/* Image & Text -----*/}
             <div className='flex flex-wrap justify-center h-full bg-slate-50'>
               {/* Image */}
-              <div className='h-full max-w-full lg:w-1/2'>
+              <div className='w-full xl:w-1/2'>
                 <div className=''>
                   {/* if post has no media entries show Cover img */}
                   {Media.data.length === 0 ? (
                     <Image
                       key={post.id}
-                      className='object-cover'
-                      width={700}
-                      height={500}
-                      src={Cover.data.attributes.url}
+                      src={
+                        Cover.data.attributes.url
+                        //   .replace(
+                        //   'upload/',
+                        //   'upload/f_auto/q_auto:best/'
+                        // )
+                      }
                       alt={Cover.data.attributes.alternativeText}
+                      width={600}
+                      height={400}
+                      className='object-cover w-full h-full'
+                      sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                     />
                   ) : (
                     <Slider {...post} />
@@ -96,9 +111,12 @@ export default function Project({ post, postContent }) {
                 </div>
               </div>
               {/* Text */}
-              <div className='px-6 py-5 lg:py-8 sm:px-8 lg:w-1/2'>
+              <div className='flex flex-col justify-between px-4 py-4 lg:py-2 lg:pt-5 sm:px-6 xl:w-1/2'>
                 {/* show {postContent} in html format */}
-                <div dangerouslySetInnerHTML={{ __html: postContent }} />
+                <div
+                  dangerouslySetInnerHTML={{ __html: postContent }}
+                  className='pb-2'
+                />
               </div>
             </div>
             <div className='flex justify-center lg:justify-end '>
