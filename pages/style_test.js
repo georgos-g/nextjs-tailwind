@@ -8,7 +8,7 @@ export default function StyleTest() {
         <div className='absolute inset-0 flex items-center justify-center mb-20 xl:pl-10'>
           <div className=' text-center relative flex flex-col h-[160px] max-w-[750px] px-14 py-6 items-center justify-center border-2 border-yellow-500 mb-28 bg-black bg-opacity-60 text-white'>
             <div
-              className='absolute -top-5 px-4 h-[30px] flex items-center justify-center '
+              className='absolute -top-5 sm:px-4 h-[30px] flex items-center justify-center '
               style={{ backdropFilter: 'blur(10px)' }}
             >
               <p className='text-[10px] xs:text-[12px] sm:text-[13px]text-center font-bold text-white'>
