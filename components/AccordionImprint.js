@@ -1,5 +1,5 @@
+import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const AccordionImprint = ({ question, content }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,12 +10,10 @@ const AccordionImprint = ({ question, content }) => {
         <div className='flex items-center justify-center'>
           <motion.div
             key='question'
-            className=' text-lg rounded-none btn w-[300px]'
+            className='text-lg rounded-none shadow-md shadow-black/20 btn btn-wide hover:text-white hover:bg-gray-600'
             onClick={() => setIsOpen(!isOpen)}
           >
-            <motion.div className='ml-1 font-bold text-slate-50'>
-              IMPRINT - Privacy Policy
-            </motion.div>
+            <div className=''>IMPRINT - Privacy Policy</div>
           </motion.div>
         </div>
 

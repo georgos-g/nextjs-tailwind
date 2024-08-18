@@ -90,7 +90,7 @@
 
 @layer utilities {
   h1 {
-    padding: 0 0 14px 0;
+    padding: 0 0 10px 0;
     font-size: 1.3em;
     font-family: 'Open Sans 400';
     letter-spacing: 3px;
@@ -140,7 +140,7 @@
     color: #fff;
   }
   li {
-    padding: 0 0 10px 0;
+    padding: 0 0 4px 0;
     margin-left: 16px;
     list-style-type: disc;
     color: rgb(55 65 81);

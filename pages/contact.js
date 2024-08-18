@@ -17,7 +17,7 @@ export default function Contact() {
 
           {/* center button  */}
           <div className='flex justify-center pt-20'>
-            <button className='text-lg rounded-none btn btn-wide hover:bg-gray-600'>
+            <button className='text-lg rounded-none shadow-md btn shadow-black/50 btn-wide hover:bg-gray-600'>
               <a
                 className='uppercase text-black/70 hover:text-white'
                 // base64 encoded email address
