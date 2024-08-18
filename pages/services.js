@@ -111,7 +111,7 @@ export default function Services() {
               <div className='px-2 py-4 md:px-4'>
                 <MoveUp>
                   <ProgressBar
-                    progresBarTitle={'WEB DEVELOPMENT'}
+                    progresBarTitle={'FRONTEND DEVELOPMENT'}
                     endProgresBarValue={90}
                   />
                 </MoveUp>
