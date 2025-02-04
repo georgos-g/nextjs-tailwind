@@ -1,12 +1,12 @@
 ## Description
 
-The frontend of this project was built with Next.js, a React framework for building server-rendered applications. It provides a powerful and flexible development experience for creating modern web applications.
+The frontend of this project was built with Next.js, leveraging its SSR, ISR, and hybrid rendering capabilities to optimize performance, SEO, and scalability.
 
-The (Headless) CMS used in this project is Strapi, an open-source headless CMS that allows you to build and manage your own APIs. Strapi provides a user-friendly interface for creating content structures and managing content for your application.
+For content management, I work with Strapi, a flexible headless CMS that allows for efficient API structuring, role-based access control, and seamless content workflows.
 
-I've used Tailwind CSS as the CSS framework for this project. Tailwind CSS is a utility-first CSS framework that provides a set of pre-defined utility classes, enabling rapid UI development and easy customization.
+On the frontend, I use Tailwind CSS to create clean, responsive UIs with a utility-first approach, ensuring maintainability and rapid development.
 
-The backend of this project is integrated via GraphQL. GraphQL is a query language for APIs and a runtime for executing queries with your existing data. It offers a flexible and efficient approach to retrieve and manipulate data from the backend server.
+I integrate GraphQL with Apollo for efficient data fetching, enabling precise, declarative queries that minimize over-fetching and improve performance.
 
 ## Installation
 
