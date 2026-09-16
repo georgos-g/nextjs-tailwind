@@ -1,8 +1,8 @@
-import { ApolloClient, InMemoryCache } from '@apollo/client';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import Slider from '../../components/Slider';
+import { createApolloClient } from '../../lib/apollo';
 import { GET_ALL_POSTS_AND_CATEGORIES } from '../../lib/queries';
 
 // import AudioPlayer from '../../components/AudioPlayer';
@@ -11,10 +11,7 @@ import markdownToHtml from '../../lib/markdownToHtml';
 
 // get static paths for each post
 export async function getStaticPaths() {
-  const client = new ApolloClient({
-    uri: process.env.STRAPI_GRAPHQL_ENDPOINT,
-    cache: new InMemoryCache(),
-  });
+  const client = createApolloClient();
 
   const { data } = await client.query({
     query: GET_ALL_POSTS_AND_CATEGORIES,
@@ -35,10 +32,7 @@ export async function getStaticPaths() {
 
 // get static props for each post
 export async function getStaticProps({ params }) {
-  const client = new ApolloClient({
-    uri: process.env.STRAPI_GRAPHQL_ENDPOINT,
-    cache: new InMemoryCache(),
-  });
+  const client = createApolloClient();
 
   const { data } = await client.query({
     query: GET_ALL_POSTS_AND_CATEGORIES,
@@ -99,7 +93,7 @@ export default function Project({ post, postContent }) {
                         //   'upload/f_auto/q_auto:best/'
                         // )
                       }
-                      alt={Cover.data.attributes.alternativeText}
+                      alt={Cover.data.attributes.alternativeText || Title}
                       width={600}
                       height={400}
                       className='object-cover w-full h-full'

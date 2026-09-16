@@ -69,7 +69,7 @@ export default function Projects({ posts, allCategories }) {
                           width={700}
                           height={400}
                           src={post.cover}
-                          alt={post.alt}
+                          alt={post.alt || post.title}
                         />
                         {/* Hover  */}
 

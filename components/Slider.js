@@ -46,9 +46,10 @@ export default function Slider({ ...post }) {
               >
                 <Image
                   src={image.attributes.url}
-                  alt={image.attributes.alt}
-                  layout='fill'
-                  objectFit='cover'
+                  alt={image.attributes.alt || 'Project image'}
+                  fill
+                  className='object-cover'
+                  sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
                 />
               </div>
             </SwiperSlide>

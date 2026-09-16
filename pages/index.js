@@ -7,7 +7,7 @@ import HomeSection from './home';
 import Projects from './projects';
 import Navbar from '../components/Navbar';
 
-import { ApolloClient, InMemoryCache } from '@apollo/client';
+import { createApolloClient } from '../lib/apollo';
 import { GET_ALL_POSTS_AND_CATEGORIES } from '../lib/queries';
 
 export default function Home({ posts, allCategories }) {
@@ -37,10 +37,7 @@ export default function Home({ posts, allCategories }) {
 }
 
 export async function getStaticProps() {
-  const client = new ApolloClient({
-    uri: process.env.STRAPI_GRAPHQL_ENDPOINT,
-    cache: new InMemoryCache(),
-  });
+  const client = createApolloClient();
 
   const { data } = await client.query({
     query: GET_ALL_POSTS_AND_CATEGORIES,
